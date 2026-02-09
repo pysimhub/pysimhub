@@ -8,18 +8,18 @@
 		"avatarUrl": "https://github.com/PineTreeLabs.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-08T06:56:20.967Z"
+		"fetchedAt": "2026-02-09T07:10:26.296Z"
 	},
 	"emerge": {
 		"stars": 138,
 		"forks": 16,
-		"lastUpdate": "2026-02-07T11:07:27Z",
+		"lastUpdate": "2026-02-08T12:43:27Z",
 		"description": "An electromagnetic field computation program",
 		"license": "NOASSERTION",
 		"avatarUrl": "https://github.com/FennisRobert.png?size=128",
 		"lastRelease": "2026-01-17T10:41:06Z",
 		"releaseVersion": "v2.1.0",
-		"fetchedAt": "2026-02-08T06:56:21.316Z"
+		"fetchedAt": "2026-02-09T07:10:26.628Z"
 	},
 	"heavi": {
 		"stars": 24,
@@ -30,7 +30,7 @@
 		"avatarUrl": "https://github.com/FennisRobert.png?size=128",
 		"lastRelease": "2025-12-23T16:25:27Z",
 		"releaseVersion": "v0.7.9",
-		"fetchedAt": "2026-02-08T06:56:21.636Z"
+		"fetchedAt": "2026-02-09T07:10:26.955Z"
 	},
 	"scikit-rf": {
 		"stars": 850,
@@ -41,7 +41,7 @@
 		"avatarUrl": "https://github.com/scikit-rf.png?size=128",
 		"lastRelease": "2026-02-01T11:59:47Z",
 		"releaseVersion": "v1.10.0",
-		"fetchedAt": "2026-02-08T06:56:21.957Z"
+		"fetchedAt": "2026-02-09T07:10:27.319Z"
 	},
 	"pathsim": {
 		"stars": 250,
@@ -52,7 +52,7 @@
 		"avatarUrl": "https://github.com/pathsim.png?size=128",
 		"lastRelease": "2026-01-27T12:48:18Z",
 		"releaseVersion": "v0.16.7",
-		"fetchedAt": "2026-02-08T06:56:22.274Z"
+		"fetchedAt": "2026-02-09T07:10:27.658Z"
 	},
 	"bdsim": {
 		"stars": 240,
@@ -63,7 +63,7 @@
 		"avatarUrl": "https://github.com/petercorke.png?size=128",
 		"lastRelease": "2022-07-14T11:23:39Z",
 		"releaseVersion": "0.9.0",
-		"fetchedAt": "2026-02-08T06:56:22.604Z"
+		"fetchedAt": "2026-02-09T07:10:28.023Z"
 	},
 	"pysd": {
 		"stars": 437,
@@ -74,7 +74,7 @@
 		"avatarUrl": "https://github.com/SDXorg.png?size=128",
 		"lastRelease": "2025-03-23T14:45:03Z",
 		"releaseVersion": "v3.14.3",
-		"fetchedAt": "2026-02-08T06:56:22.959Z"
+		"fetchedAt": "2026-02-09T07:10:28.367Z"
 	},
 	"thermal-engineering-systems-in-python-tespy": {
 		"stars": 363,
@@ -85,7 +85,7 @@
 		"avatarUrl": "https://github.com/oemof.png?size=128",
 		"lastRelease": "2026-01-24T14:22:48Z",
 		"releaseVersion": "v0.9.12",
-		"fetchedAt": "2026-02-08T06:56:23.286Z"
+		"fetchedAt": "2026-02-09T07:10:28.681Z"
 	},
 	"pymunk": {
 		"stars": 1038,
@@ -96,21 +96,21 @@
 		"avatarUrl": "https://github.com/viblo.png?size=128",
 		"lastRelease": "2025-11-02T18:47:39Z",
 		"releaseVersion": "7.2.0",
-		"fetchedAt": "2026-02-08T06:56:23.597Z"
+		"fetchedAt": "2026-02-09T07:10:29.024Z"
 	},
 	"mesa": {
-		"stars": 3408,
+		"stars": 3409,
 		"forks": 1139,
-		"lastUpdate": "2026-02-08T06:09:38Z",
+		"lastUpdate": "2026-02-08T15:42:06Z",
 		"description": "Mesa is an open-source Python library for agent-based modeling, ideal for simulating complex systems and exploring emergent behaviors.",
 		"license": "Apache-2.0",
 		"avatarUrl": "https://github.com/mesa.png?size=128",
 		"lastRelease": "2026-01-23T12:25:07Z",
 		"releaseVersion": "v3.4.2",
-		"fetchedAt": "2026-02-08T06:56:23.948Z"
+		"fetchedAt": "2026-02-09T07:10:29.399Z"
 	},
 	"brian2": {
-		"stars": 1115,
+		"stars": 1117,
 		"forks": 264,
 		"lastUpdate": "2026-02-05T13:40:48Z",
 		"description": "Brian is a free, open source simulator for spiking neural networks. ",
@@ -118,7 +118,7 @@
 		"avatarUrl": "https://github.com/brian-team.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-08T06:56:24.310Z"
+		"fetchedAt": "2026-02-09T07:10:29.782Z"
 	},
 	"scikit-fem": {
 		"stars": 607,
@@ -129,18 +129,18 @@
 		"avatarUrl": "https://github.com/kinnala.png?size=128",
 		"lastRelease": "2026-01-19T12:26:57Z",
 		"releaseVersion": "12.0.0",
-		"fetchedAt": "2026-02-08T06:56:24.629Z"
+		"fetchedAt": "2026-02-09T07:10:30.110Z"
 	},
 	"autoemulate": {
 		"stars": 109,
 		"forks": 27,
-		"lastUpdate": "2026-02-07T23:08:34Z",
+		"lastUpdate": "2026-02-08T23:08:53Z",
 		"description": "Emulate simulations easily",
 		"license": "MIT",
 		"avatarUrl": "https://github.com/alan-turing-institute.png?size=128",
 		"lastRelease": "2026-01-14T13:47:34Z",
 		"releaseVersion": "v2.0.0",
-		"fetchedAt": "2026-02-08T06:56:24.998Z"
+		"fetchedAt": "2026-02-09T07:10:30.470Z"
 	},
 	"festim": {
 		"stars": 115,
@@ -151,7 +151,7 @@
 		"avatarUrl": "https://github.com/festim-dev.png?size=128",
 		"lastRelease": "2025-08-28T18:03:40Z",
 		"releaseVersion": "v1.4.1.post1",
-		"fetchedAt": "2026-02-08T06:56:25.337Z"
+		"fetchedAt": "2026-02-09T07:10:30.925Z"
 	},
 	"sfepy": {
 		"stars": 823,
@@ -162,7 +162,7 @@
 		"avatarUrl": "https://github.com/sfepy.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-08T06:56:25.665Z"
+		"fetchedAt": "2026-02-09T07:10:31.283Z"
 	},
 	"lcapy": {
 		"stars": 285,
@@ -173,6 +173,6 @@
 		"avatarUrl": "https://github.com/mph-.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-08T06:56:26.003Z"
+		"fetchedAt": "2026-02-09T07:10:31.613Z"
 	}
 }
