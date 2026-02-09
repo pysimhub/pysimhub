@@ -33,6 +33,7 @@ body:
         - heavi
         - lcapy
         - mesa
+        - mujoco-scene-editor
         - pathsim
         - pymunk
         - pysd
@@ -104,6 +105,7 @@ body:
         - label: homogenization
         - label: hydrogen
         - label: microwave
+        - label: mujoco
         - label: network
         - label: neuroscience
         - label: physics
@@ -113,6 +115,7 @@ body:
         - label: rf
         - label: robotics
         - label: sensitivity analysis
+        - label: simulation
         - label: snn
         - label: spiking neural network
         - label: system-modeling

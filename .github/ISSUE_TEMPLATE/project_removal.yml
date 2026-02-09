@@ -34,6 +34,7 @@ body:
         - heavi
         - lcapy
         - mesa
+        - mujoco-scene-editor
         - pathsim
         - pymunk
         - pysd
