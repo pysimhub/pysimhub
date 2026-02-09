@@ -28,6 +28,7 @@ body:
         - bdsim
         - brian2
         - emerge
+        - fenicsx
         - festim
         - heavi
         - lcapy

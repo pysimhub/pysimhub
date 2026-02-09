@@ -317,7 +317,7 @@
 		"homepage": "https://fenicsproject.org/",
 		"example": "https://docs.fenicsproject.org/dolfinx/main/python/demos.html",
 		"id": "fenicsx",
-		"logo": "https://github.com/user-attachments/assets/50e61b58-0083-4636-b84d-8dffd45afeee",
+		"logo": "/logos/fenicsx.png",
 		"submittedBy": "jorgensd"
 	}
 ]
