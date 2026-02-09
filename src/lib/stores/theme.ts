@@ -6,6 +6,14 @@ type Theme = 'dark' | 'light';
 function getInitialTheme(): Theme {
 	if (!browser) return 'dark';
 
+	const urlTheme = new URL(window.location.href).searchParams.get('theme');
+	if (urlTheme === 'dark' || urlTheme === 'light') {
+		localStorage.setItem('theme', urlTheme);
+		document.documentElement.classList.remove('dark', 'light');
+		document.documentElement.classList.add(urlTheme);
+		return urlTheme;
+	}
+
 	const stored = localStorage.getItem('theme') as Theme | null;
 	if (stored === 'dark' || stored === 'light') return stored;
 
