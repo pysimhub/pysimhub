@@ -319,5 +319,22 @@
 		"id": "fenicsx",
 		"logo": "/logos/fenicsx.png",
 		"submittedBy": "jorgensd"
+	},
+	{
+		"name": "mujoco-scene-editor",
+		"tagline": "Lightweight, interactive scene editor for MuJoCo 3.x. Create or edit scenes in your browser to place shapes, import meshes, add robots, and edit elements interactively.",
+		"description": "mujoco-scene-editor is a lightweight, browser-based scene editor for MuJoCo 3.x designed for fast creation and modification of simulation environments.\n\nLaunch the editor from the command line with **mjcreate** to start a new scene or **mjedit** to load and interactively modify existing MJCF models. Users can place primitive geometries, import meshes, add robots, and export simulation-ready MuJoCo XML without manual file editing.\n\nThe tool also provides **mjprompt**, which generates an initial scene from a natural-language prompt using ChatGPT. Generated scenes can be immediately opened in the editor and refined visually, enabling a rapid workflow from idea to simulation.\n\nmujoco-scene-editor focuses on reducing friction between scene design and simulation through interactive editing, prompt-based generation, and clean MuJoCo-native output.",
+		"tags": [
+			"physics",
+			"robotics",
+			"visualization",
+			"mujoco",
+			"simulation"
+		],
+		"github": "https://github.com/markusgrotz/mujoco-scene-editor",
+		"pypi": "https://pypi.org/project/mujoco-scene-editor/",
+		"id": "mujoco-scene-editor",
+		"logo": "https://github.com/user-attachments/assets/94ccac11-1344-4a79-a6b0-822cdebc33b8",
+		"submittedBy": "markusgrotz"
 	}
 ]
