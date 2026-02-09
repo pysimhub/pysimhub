@@ -1,5 +1,5 @@
-PROJECT_ID=lcapy
-PROJECT_NAME=Lcapy
-PROJECT_TAGLINE=Linear circuit analysis and symbolic signal processing
-PROJECT_TAGS=circuit, control, system-modeling
-PROJECT_GITHUB=https://github.com/mph-/lcapy
+PROJECT_ID=fenicsx
+PROJECT_NAME=FEniCSx
+PROJECT_TAGLINE=Computing platform for solving partial differential equations with the finite element method
+PROJECT_TAGS=finite-element
+PROJECT_GITHUB=https://github.com/FEniCS/dolfinx
