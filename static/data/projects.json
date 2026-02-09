@@ -303,5 +303,21 @@
 		"pypi": "https://pypi.org/project/lcapy/",
 		"id": "lcapy",
 		"submittedBy": "mph-"
+	},
+	{
+		"name": "FEniCSx",
+		"tagline": "Computing platform for solving partial differential equations with the finite element method",
+		"description": "FEniCS enables users to quickly translate scientific models into efficient finite element code. With the high-level Python and C++ interfaces to FEniCS, it is easy to get started, but FEniCS offers also powerful capabilities for more experienced programmers. FEniCS runs on a multitude of platforms ranging from laptops to high-performance computers.",
+		"tags": [
+			"finite-element"
+		],
+		"github": "https://github.com/FEniCS/dolfinx",
+		"docs": "https://docs.fenicsproject.org/",
+		"condaForge": "https://anaconda.org/conda-forge/fenics-dolfinx",
+		"homepage": "https://fenicsproject.org/",
+		"example": "https://docs.fenicsproject.org/dolfinx/main/python/demos.html",
+		"id": "fenicsx",
+		"logo": "https://github.com/user-attachments/assets/50e61b58-0083-4636-b84d-8dffd45afeee",
+		"submittedBy": "jorgensd"
 	}
 ]
