@@ -1,5 +1,5 @@
-PROJECT_ID=fenicsx
-PROJECT_NAME=FEniCSx
-PROJECT_TAGLINE=Computing platform for solving partial differential equations with the finite element method
-PROJECT_TAGS=finite-element
-PROJECT_GITHUB=https://github.com/FEniCS/dolfinx
+PROJECT_ID=mujoco-scene-editor
+PROJECT_NAME=mujoco-scene-editor
+PROJECT_TAGLINE=Lightweight, interactive scene editor for MuJoCo 3.x. Create or edit scenes in your browser to place shapes, import meshes, add robots, and edit elements interactively.
+PROJECT_TAGS=physics, robotics, visualization, mujoco, simulation
+PROJECT_GITHUB=https://github.com/markusgrotz/mujoco-scene-editor
