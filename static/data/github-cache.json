@@ -8,7 +8,7 @@
 		"avatarUrl": "https://github.com/PineTreeLabs.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-09T21:03:20.368Z"
+		"fetchedAt": "2026-02-10T07:11:15.619Z"
 	},
 	"emerge": {
 		"stars": 138,
@@ -19,7 +19,7 @@
 		"avatarUrl": "https://github.com/FennisRobert.png?size=128",
 		"lastRelease": "2026-01-17T10:41:06Z",
 		"releaseVersion": "v2.1.0",
-		"fetchedAt": "2026-02-09T21:03:20.628Z"
+		"fetchedAt": "2026-02-10T07:11:15.893Z"
 	},
 	"heavi": {
 		"stars": 24,
@@ -30,7 +30,7 @@
 		"avatarUrl": "https://github.com/FennisRobert.png?size=128",
 		"lastRelease": "2025-12-23T16:25:27Z",
 		"releaseVersion": "v0.7.9",
-		"fetchedAt": "2026-02-09T21:03:20.903Z"
+		"fetchedAt": "2026-02-10T07:11:16.160Z"
 	},
 	"scikit-rf": {
 		"stars": 852,
@@ -41,7 +41,7 @@
 		"avatarUrl": "https://github.com/scikit-rf.png?size=128",
 		"lastRelease": "2026-02-01T11:59:47Z",
 		"releaseVersion": "v1.10.0",
-		"fetchedAt": "2026-02-09T21:03:21.231Z"
+		"fetchedAt": "2026-02-10T07:11:16.471Z"
 	},
 	"pathsim": {
 		"stars": 250,
@@ -52,7 +52,7 @@
 		"avatarUrl": "https://github.com/pathsim.png?size=128",
 		"lastRelease": "2026-01-27T12:48:18Z",
 		"releaseVersion": "v0.16.7",
-		"fetchedAt": "2026-02-09T21:03:21.553Z"
+		"fetchedAt": "2026-02-10T07:11:16.745Z"
 	},
 	"bdsim": {
 		"stars": 240,
@@ -63,7 +63,7 @@
 		"avatarUrl": "https://github.com/petercorke.png?size=128",
 		"lastRelease": "2022-07-14T11:23:39Z",
 		"releaseVersion": "0.9.0",
-		"fetchedAt": "2026-02-09T21:03:21.844Z"
+		"fetchedAt": "2026-02-10T07:11:17.075Z"
 	},
 	"pysd": {
 		"stars": 437,
@@ -74,7 +74,7 @@
 		"avatarUrl": "https://github.com/SDXorg.png?size=128",
 		"lastRelease": "2025-03-23T14:45:03Z",
 		"releaseVersion": "v3.14.3",
-		"fetchedAt": "2026-02-09T21:03:22.135Z"
+		"fetchedAt": "2026-02-10T07:11:17.386Z"
 	},
 	"thermal-engineering-systems-in-python-tespy": {
 		"stars": 363,
@@ -85,7 +85,7 @@
 		"avatarUrl": "https://github.com/oemof.png?size=128",
 		"lastRelease": "2026-01-24T14:22:48Z",
 		"releaseVersion": "v0.9.12",
-		"fetchedAt": "2026-02-09T21:03:22.470Z"
+		"fetchedAt": "2026-02-10T07:11:17.668Z"
 	},
 	"pymunk": {
 		"stars": 1039,
@@ -96,18 +96,18 @@
 		"avatarUrl": "https://github.com/viblo.png?size=128",
 		"lastRelease": "2025-11-02T18:47:39Z",
 		"releaseVersion": "7.2.0",
-		"fetchedAt": "2026-02-09T21:03:22.760Z"
+		"fetchedAt": "2026-02-10T07:11:18.003Z"
 	},
 	"mesa": {
-		"stars": 3412,
-		"forks": 1140,
+		"stars": 3414,
+		"forks": 1141,
 		"lastUpdate": "2026-02-09T18:13:12Z",
 		"description": "Mesa is an open-source Python library for agent-based modeling, ideal for simulating complex systems and exploring emergent behaviors.",
 		"license": "Apache-2.0",
 		"avatarUrl": "https://github.com/mesa.png?size=128",
 		"lastRelease": "2026-01-23T12:25:07Z",
 		"releaseVersion": "v3.4.2",
-		"fetchedAt": "2026-02-09T21:03:23.057Z"
+		"fetchedAt": "2026-02-10T07:11:18.267Z"
 	},
 	"brian2": {
 		"stars": 1118,
@@ -118,7 +118,7 @@
 		"avatarUrl": "https://github.com/brian-team.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-09T21:03:23.359Z"
+		"fetchedAt": "2026-02-10T07:11:18.608Z"
 	},
 	"scikit-fem": {
 		"stars": 608,
@@ -129,21 +129,21 @@
 		"avatarUrl": "https://github.com/kinnala.png?size=128",
 		"lastRelease": "2026-01-19T12:26:57Z",
 		"releaseVersion": "12.0.0",
-		"fetchedAt": "2026-02-09T21:03:23.717Z"
+		"fetchedAt": "2026-02-10T07:11:18.875Z"
 	},
 	"autoemulate": {
 		"stars": 109,
 		"forks": 27,
-		"lastUpdate": "2026-02-08T23:08:53Z",
+		"lastUpdate": "2026-02-09T23:14:00Z",
 		"description": "Emulate simulations easily",
 		"license": "MIT",
 		"avatarUrl": "https://github.com/alan-turing-institute.png?size=128",
 		"lastRelease": "2026-01-14T13:47:34Z",
 		"releaseVersion": "v2.0.0",
-		"fetchedAt": "2026-02-09T21:03:24.045Z"
+		"fetchedAt": "2026-02-10T07:11:19.185Z"
 	},
 	"festim": {
-		"stars": 115,
+		"stars": 116,
 		"forks": 33,
 		"lastUpdate": "2026-02-02T19:16:47Z",
 		"description": "Coupled hydrogen/tritium transport and heat transfer modelling using FEniCS",
@@ -151,7 +151,7 @@
 		"avatarUrl": "https://github.com/festim-dev.png?size=128",
 		"lastRelease": "2025-08-28T18:03:40Z",
 		"releaseVersion": "v1.4.1.post1",
-		"fetchedAt": "2026-02-09T21:03:24.382Z"
+		"fetchedAt": "2026-02-10T07:11:19.489Z"
 	},
 	"sfepy": {
 		"stars": 823,
@@ -162,7 +162,7 @@
 		"avatarUrl": "https://github.com/sfepy.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-09T21:03:24.689Z"
+		"fetchedAt": "2026-02-10T07:11:19.787Z"
 	},
 	"lcapy": {
 		"stars": 285,
@@ -173,18 +173,18 @@
 		"avatarUrl": "https://github.com/mph-.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-09T21:03:24.980Z"
+		"fetchedAt": "2026-02-10T07:11:20.096Z"
 	},
 	"fenicsx": {
 		"stars": 1048,
 		"forks": 230,
-		"lastUpdate": "2026-02-09T18:14:34Z",
+		"lastUpdate": "2026-02-09T22:49:27Z",
 		"description": "Next generation FEniCS problem solving environment",
 		"license": "LGPL-3.0",
 		"avatarUrl": "https://github.com/FEniCS.png?size=128",
 		"lastRelease": "2025-12-17T15:48:29Z",
 		"releaseVersion": "v0.10.0.post5",
-		"fetchedAt": "2026-02-09T21:03:25.288Z"
+		"fetchedAt": "2026-02-10T07:11:20.425Z"
 	},
 	"mujoco-scene-editor": {
 		"stars": 1,
@@ -195,6 +195,6 @@
 		"avatarUrl": "https://github.com/markusgrotz.png?size=128",
 		"lastRelease": "2026-02-09T18:51:33Z",
 		"releaseVersion": "v0.1.2",
-		"fetchedAt": "2026-02-09T21:03:25.556Z"
+		"fetchedAt": "2026-02-10T07:11:20.698Z"
 	}
 }
