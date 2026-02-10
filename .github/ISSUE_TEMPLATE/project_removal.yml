@@ -37,6 +37,7 @@ body:
         - mujoco-scene-editor
         - pathsim
         - pymunk
+        - pypsa
         - pysd
         - scikit-fem
         - scikit-rf
