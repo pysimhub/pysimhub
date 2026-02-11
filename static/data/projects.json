@@ -378,7 +378,7 @@
 		"pypi": "https://pypi.org/project/salabim",
 		"homepage": "https://salabim.org",
 		"id": "salabim",
-		"logo": "https://www.salabim.org/salabim_logo_payoff.png",
+		"logo": "/logos/salabim.png",
 		"submittedBy": "salabim"
 	}
 ]

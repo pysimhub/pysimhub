@@ -63,6 +63,7 @@ body:
         - label: computational neuroscience
         - label: control
         - label: cycle simulation
+        - label: des
         - label: digital-twin
         - label: dynamic-systems
         - label: electromagnetic
