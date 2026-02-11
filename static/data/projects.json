@@ -360,5 +360,25 @@
 		"example": "https://docs.pypsa.org/latest/examples/example-1/",
 		"id": "pypsa",
 		"submittedBy": "lkstrp"
+	},
+	{
+		"name": "salabim",
+		"tagline": "Discrete event simulation in Python",
+		"description": "Salabim is a Python library for object-oriented discrete event simulation (DES) and animation.\n\nDiscrete event simulation (DES) finds applications in various logistical domains including production facilities, warehousing, airports, hospitals, mining, materials handling, steel mills, and computer network analysis.\n\nSalabim follows a well-proven and intuitive process description method similar to Tomas and Must.</br>The package provides:\n\n- Components\n- Queues\n- Resources\n- Stores\n- States\n- Monitors for data collection and presentation\n- 2D and 3D animation (including video production) (see below)\n- Tracing facilities\n- Advanced statistical sampling\n\nIn contrast to some other Python DES packages, salabim does not require the use of yield statements for process control, making it more straightforward to use. Salabim has minimal requirements, especially when animation is disabled.\n\nFeatures and documentation:\n\n- Cross-platform support: salabim runs on Windows, macOS, Linux, iOS/iPadOS (Pythonista), and can even be used with \"Python In Excel\".\n- Comprehensive documentation: Visit [www.salabim.org/manual](https://www.salabim.org/manual) for detailed documentation.\n\n\nSupport:\n\nRuud van der Ham, the core developer, is available and willing to help users with issues related to the package and modeling in general. He also provides services such as code and model reviews, consultancy, and training.\n\nGetting Started:\n\nTo start using salabim, visit [www.salabim.org](https://www.salabim.org) for installation instructions and further details.",
+		"tags": [
+			"digital-twin",
+			"engineering",
+			"simulation",
+			"system-modeling",
+			"visualization",
+			"des"
+		],
+		"github": "https://github.com/salabim/salabim",
+		"docs": "https://salabim.org",
+		"pypi": "https://pypi.org/project/salabim",
+		"homepage": "https://salabim.org",
+		"id": "salabim",
+		"logo": "https://www.salabim.org/salabim_logo_payoff.png",
+		"submittedBy": "salabim"
 	}
 ]

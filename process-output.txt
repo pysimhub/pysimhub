@@ -1,5 +1,5 @@
-PROJECT_ID=pypsa
-PROJECT_NAME=PyPSA
-PROJECT_TAGLINE=An open-source Python framework for optimising modern power systems with conventional generators, renewable energy, storage, and multi-sector coupling - designed for researchers and planners.
-PROJECT_TAGS=engineering, heating, hydrogen, network, powerplant, sensitivity analysis, system-modeling, uncertainty quantification, visualization
-PROJECT_GITHUB=https://github.com/PyPSA/PyPSA
+PROJECT_ID=salabim
+PROJECT_NAME=salabim
+PROJECT_TAGLINE=Discrete event simulation in Python
+PROJECT_TAGS=digital-twin, engineering, simulation, system-modeling, visualization, des
+PROJECT_GITHUB=https://github.com/salabim/salabim
