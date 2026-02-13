@@ -397,7 +397,7 @@
 		"pypi": "https://pypi.org/project/quatorch/",
 		"example": "https://egidioln.github.io/QuaTorch/examples.html",
 		"id": "quatorch",
-		"logo": "https://raw.githubusercontent.com/egidioln/QuaTorch/refs/heads/main/docs/source/_static/logo.svg",
+		"logo": "/logos/quatorch.svg",
 		"submittedBy": "egidioln"
 	}
 ]

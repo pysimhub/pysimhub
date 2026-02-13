@@ -79,6 +79,7 @@ body:
         - label: neuroscience
         - label: physics
         - label: powerplant
+        - label: quaternions
         - label: radio-frequency
         - label: refrigeration
         - label: rf
