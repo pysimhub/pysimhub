@@ -380,5 +380,24 @@
 		"id": "salabim",
 		"logo": "/logos/salabim.png",
 		"submittedBy": "salabim"
+	},
+	{
+		"name": "QuaTorch",
+		"tagline": "Quaternions in PyTorch",
+		"description": "**QuaTorch** is a lightweight python package providing Quaternion, a `torch.Tensor` subclass that represents a [Quaternion](https://en.wikipedia.org/wiki/Quaternion). It implements `torch.compile`-able operations for quaternions such as multiplication, conjugation, inversion, normalization, log, exp, etc. It also supports conversion to/from rotation matrix and axis-angle representation. Convenient utilities are provided together, such as spherical linear interpolation (SLERP) and 3D vector rotation.",
+		"tags": [
+			"engineering",
+			"physics",
+			"robotics",
+			"simulation",
+			"quaternions"
+		],
+		"github": "https://github.com/egidioln/QuaTorch",
+		"docs": "https://egidioln.github.io/QuaTorch/",
+		"pypi": "https://pypi.org/project/quatorch/",
+		"example": "https://egidioln.github.io/QuaTorch/examples.html",
+		"id": "quatorch",
+		"logo": "https://raw.githubusercontent.com/egidioln/QuaTorch/refs/heads/main/docs/source/_static/logo.svg",
+		"submittedBy": "egidioln"
 	}
 ]

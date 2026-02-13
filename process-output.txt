@@ -1,5 +1,5 @@
-PROJECT_ID=salabim
-PROJECT_NAME=salabim
-PROJECT_TAGLINE=Discrete event simulation in Python
-PROJECT_TAGS=digital-twin, engineering, simulation, system-modeling, visualization, des
-PROJECT_GITHUB=https://github.com/salabim/salabim
+PROJECT_ID=quatorch
+PROJECT_NAME=QuaTorch
+PROJECT_TAGLINE=Quaternions in PyTorch
+PROJECT_TAGS=engineering, physics, robotics, simulation, quaternions
+PROJECT_GITHUB=https://github.com/egidioln/QuaTorch
