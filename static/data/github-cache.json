@@ -8,7 +8,7 @@
 		"avatarUrl": "https://github.com/PineTreeLabs.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-13T22:41:05.104Z"
+		"fetchedAt": "2026-02-14T06:52:55.504Z"
 	},
 	"emerge": {
 		"stars": 140,
@@ -19,7 +19,7 @@
 		"avatarUrl": "https://github.com/FennisRobert.png?size=128",
 		"lastRelease": "2026-01-17T10:41:06Z",
 		"releaseVersion": "v2.1.0",
-		"fetchedAt": "2026-02-13T22:41:05.352Z"
+		"fetchedAt": "2026-02-14T06:52:55.769Z"
 	},
 	"heavi": {
 		"stars": 24,
@@ -30,18 +30,18 @@
 		"avatarUrl": "https://github.com/FennisRobert.png?size=128",
 		"lastRelease": "2025-12-23T16:25:27Z",
 		"releaseVersion": "v0.7.9",
-		"fetchedAt": "2026-02-13T22:41:05.625Z"
+		"fetchedAt": "2026-02-14T06:52:56.039Z"
 	},
 	"scikit-rf": {
 		"stars": 855,
-		"forks": 326,
+		"forks": 325,
 		"lastUpdate": "2026-02-11T08:05:26Z",
 		"description": "RF and Microwave Engineering Scikit ",
 		"license": "BSD-3-Clause",
 		"avatarUrl": "https://github.com/scikit-rf.png?size=128",
 		"lastRelease": "2026-02-01T11:59:47Z",
 		"releaseVersion": "v1.10.0",
-		"fetchedAt": "2026-02-13T22:41:05.929Z"
+		"fetchedAt": "2026-02-14T06:52:56.299Z"
 	},
 	"pathsim": {
 		"stars": 259,
@@ -52,7 +52,7 @@
 		"avatarUrl": "https://github.com/pathsim.png?size=128",
 		"lastRelease": "2026-02-10T22:04:31Z",
 		"releaseVersion": "v0.16.8",
-		"fetchedAt": "2026-02-13T22:41:06.243Z"
+		"fetchedAt": "2026-02-14T06:52:56.569Z"
 	},
 	"bdsim": {
 		"stars": 241,
@@ -63,7 +63,7 @@
 		"avatarUrl": "https://github.com/petercorke.png?size=128",
 		"lastRelease": "2022-07-14T11:23:39Z",
 		"releaseVersion": "0.9.0",
-		"fetchedAt": "2026-02-13T22:41:06.535Z"
+		"fetchedAt": "2026-02-14T06:52:56.846Z"
 	},
 	"pysd": {
 		"stars": 437,
@@ -74,7 +74,7 @@
 		"avatarUrl": "https://github.com/SDXorg.png?size=128",
 		"lastRelease": "2025-03-23T14:45:03Z",
 		"releaseVersion": "v3.14.3",
-		"fetchedAt": "2026-02-13T22:41:06.829Z"
+		"fetchedAt": "2026-02-14T06:52:57.116Z"
 	},
 	"thermal-engineering-systems-in-python-tespy": {
 		"stars": 365,
@@ -85,7 +85,7 @@
 		"avatarUrl": "https://github.com/oemof.png?size=128",
 		"lastRelease": "2026-01-24T14:22:48Z",
 		"releaseVersion": "v0.9.12",
-		"fetchedAt": "2026-02-13T22:41:07.135Z"
+		"fetchedAt": "2026-02-14T06:52:57.361Z"
 	},
 	"pymunk": {
 		"stars": 1040,
@@ -96,10 +96,10 @@
 		"avatarUrl": "https://github.com/viblo.png?size=128",
 		"lastRelease": "2025-11-02T18:47:39Z",
 		"releaseVersion": "7.2.0",
-		"fetchedAt": "2026-02-13T22:41:07.399Z"
+		"fetchedAt": "2026-02-14T06:52:57.614Z"
 	},
 	"mesa": {
-		"stars": 3418,
+		"stars": 3419,
 		"forks": 1143,
 		"lastUpdate": "2026-02-13T20:07:22Z",
 		"description": "Mesa is an open-source Python library for agent-based modeling, ideal for simulating complex systems and exploring emergent behaviors.",
@@ -107,7 +107,7 @@
 		"avatarUrl": "https://github.com/mesa.png?size=128",
 		"lastRelease": "2026-01-23T12:25:07Z",
 		"releaseVersion": "v3.4.2",
-		"fetchedAt": "2026-02-13T22:41:07.710Z"
+		"fetchedAt": "2026-02-14T06:52:57.866Z"
 	},
 	"brian2": {
 		"stars": 1117,
@@ -118,7 +118,7 @@
 		"avatarUrl": "https://github.com/brian-team.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-13T22:41:08.010Z"
+		"fetchedAt": "2026-02-14T06:52:58.116Z"
 	},
 	"scikit-fem": {
 		"stars": 608,
@@ -129,18 +129,18 @@
 		"avatarUrl": "https://github.com/kinnala.png?size=128",
 		"lastRelease": "2026-01-19T12:26:57Z",
 		"releaseVersion": "12.0.0",
-		"fetchedAt": "2026-02-13T22:41:08.267Z"
+		"fetchedAt": "2026-02-14T06:52:58.379Z"
 	},
 	"autoemulate": {
 		"stars": 109,
 		"forks": 27,
-		"lastUpdate": "2026-02-13T10:21:24Z",
+		"lastUpdate": "2026-02-13T23:10:03Z",
 		"description": "Emulate simulations easily",
 		"license": "MIT",
 		"avatarUrl": "https://github.com/alan-turing-institute.png?size=128",
 		"lastRelease": "2026-01-14T13:47:34Z",
 		"releaseVersion": "v2.0.0",
-		"fetchedAt": "2026-02-13T22:41:08.555Z"
+		"fetchedAt": "2026-02-14T06:52:58.694Z"
 	},
 	"festim": {
 		"stars": 117,
@@ -151,7 +151,7 @@
 		"avatarUrl": "https://github.com/festim-dev.png?size=128",
 		"lastRelease": "2025-08-28T18:03:40Z",
 		"releaseVersion": "v1.4.1.post1",
-		"fetchedAt": "2026-02-13T22:41:08.913Z"
+		"fetchedAt": "2026-02-14T06:52:58.977Z"
 	},
 	"sfepy": {
 		"stars": 824,
@@ -162,7 +162,7 @@
 		"avatarUrl": "https://github.com/sfepy.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-13T22:41:09.208Z"
+		"fetchedAt": "2026-02-14T06:52:59.247Z"
 	},
 	"lcapy": {
 		"stars": 285,
@@ -173,7 +173,7 @@
 		"avatarUrl": "https://github.com/mph-.png?size=128",
 		"lastRelease": null,
 		"releaseVersion": null,
-		"fetchedAt": "2026-02-13T22:41:09.499Z"
+		"fetchedAt": "2026-02-14T06:52:59.507Z"
 	},
 	"fenicsx": {
 		"stars": 1051,
@@ -184,7 +184,7 @@
 		"avatarUrl": "https://github.com/FEniCS.png?size=128",
 		"lastRelease": "2025-12-17T15:48:29Z",
 		"releaseVersion": "v0.10.0.post5",
-		"fetchedAt": "2026-02-13T22:41:09.817Z"
+		"fetchedAt": "2026-02-14T06:52:59.791Z"
 	},
 	"mujoco-scene-editor": {
 		"stars": 1,
@@ -195,7 +195,7 @@
 		"avatarUrl": "https://github.com/markusgrotz.png?size=128",
 		"lastRelease": "2026-02-09T18:51:33Z",
 		"releaseVersion": "v0.1.2",
-		"fetchedAt": "2026-02-13T22:41:10.078Z"
+		"fetchedAt": "2026-02-14T06:53:00.035Z"
 	},
 	"pypsa": {
 		"stars": 1857,
@@ -206,7 +206,7 @@
 		"avatarUrl": "https://github.com/PyPSA.png?size=128",
 		"lastRelease": "2026-01-13T13:23:17Z",
 		"releaseVersion": "v1.0.7",
-		"fetchedAt": "2026-02-13T22:41:10.386Z"
+		"fetchedAt": "2026-02-14T06:53:00.271Z"
 	},
 	"salabim": {
 		"stars": 379,
@@ -216,7 +216,7 @@
 		"avatarUrl": "https://github.com/salabim.png?size=128",
 		"lastRelease": "2026-02-12T06:20:42Z",
 		"releaseVersion": "26.0.1",
-		"fetchedAt": "2026-02-13T22:41:10.727Z"
+		"fetchedAt": "2026-02-14T06:53:00.500Z"
 	},
 	"quatorch": {
 		"stars": 10,
@@ -227,6 +227,6 @@
 		"avatarUrl": "https://github.com/egidioln.png?size=128",
 		"lastRelease": "2026-01-30T02:28:37Z",
 		"releaseVersion": "v0.2.0",
-		"fetchedAt": "2026-02-13T22:41:11.004Z"
+		"fetchedAt": "2026-02-14T06:53:00.780Z"
 	}
 }
