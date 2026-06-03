@@ -58,10 +58,25 @@ jobs:
       - name: DEBUG lychee output
         if: always()
         run: |
-          echo "=== top-level keys ==="
-          node -e 'const d=require("./lychee-output.json");console.log(Object.keys(d));console.log("fail_map keys:",d.fail_map?Object.keys(d.fail_map):"none");console.log("error_map keys:",d.error_map?Object.keys(d.error_map):"none")'
-          echo "=== first 2500 chars ==="
-          head -c 2500 lychee-output.json
+          node -e '
+            const d=require("./lychee-output.json");
+            const m=d.error_map||d.fail_map||{};
+            const byCode={};
+            let total=0;
+            const broken=[];
+            for(const src of Object.keys(m)){
+              for(const e of m[src]){
+                total++;
+                const code=(e.status&&typeof e.status==="object")?e.status.code:e.status;
+                byCode[code]=(byCode[code]||0)+1;
+                if(!code||code>=400) broken.push({url:e.url,code});
+              }
+            }
+            console.log("error_map total entries:",total);
+            console.log("by code:",JSON.stringify(byCode));
+            console.log("broken (code>=400 or falsy):",broken.length);
+            console.log("sample broken:",JSON.stringify(broken.slice(0,15),null,1));
+          '
 
       - name: Map broken links to submitters
         id: map-links
