@@ -1,0 +1,18 @@
+{
+	"id": "bdsim",
+	"name": "bdsim",
+	"tagline": "Block diagram simulation for robotics and control systems",
+	"description": "bdsim is a Python framework for simulating block diagram models, particularly suited for robotics and control systems. It supports a wide range of block types including sources, sinks, transfer functions, and custom blocks. Part of the Robotics Toolbox ecosystem, it integrates seamlessly with robot models for system-level simulation and analysis.",
+	"logo": "/logos/bdsim.svg",
+	"tags": [
+		"block-diagram",
+		"robotics",
+		"control",
+		"dynamic-systems",
+		"system-modeling",
+		"transient"
+	],
+	"github": "https://github.com/petercorke/bdsim",
+	"docs": "https://petercorke.github.io/bdsim/",
+	"pypi": "https://pypi.org/project/bdsim/"
+}

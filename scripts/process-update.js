@@ -6,9 +6,10 @@
  * Used by the process-update GitHub Action.
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import { dirname } from 'path';
+import { loadProjects, writeProject } from './lib/projects-store.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -198,16 +199,14 @@ function parseUpdate(issueBody) {
 	return { projectId, updates, reason };
 }
 
-function applyUpdate(projectId, updates, projectsPath) {
-	const projects = JSON.parse(readFileSync(projectsPath, 'utf-8'));
+function applyUpdate(projectId, updates) {
+	const projects = loadProjects();
 
 	// Find the project
-	const projectIndex = projects.findIndex(p => p.id === projectId);
-	if (projectIndex === -1) {
+	const project = projects.find(p => p.id === projectId);
+	if (!project) {
 		throw new Error(`Project with ID '${projectId}' not found`);
 	}
-
-	const project = projects[projectIndex];
 
 	// Apply updates
 	for (const [key, value] of Object.entries(updates)) {
@@ -218,8 +217,8 @@ function applyUpdate(projectId, updates, projectsPath) {
 		}
 	}
 
-	// Write back
-	writeFileSync(projectsPath, JSON.stringify(projects, null, '\t') + '\n');
+	// Write back the single project file
+	writeProject(project);
 
 	return project;
 }
@@ -227,7 +226,6 @@ function applyUpdate(projectId, updates, projectsPath) {
 // Main execution
 const issueBody = process.env.ISSUE_BODY;
 const issueAuthor = process.env.ISSUE_AUTHOR;
-const projectsPath = join(__dirname, '..', 'static', 'data', 'projects.json');
 
 if (!issueBody) {
 	console.error('ISSUE_BODY environment variable is required');
@@ -236,7 +234,7 @@ if (!issueBody) {
 
 try {
 	const { projectId, updates, reason } = parseUpdate(issueBody);
-	const project = applyUpdate(projectId, updates, projectsPath);
+	const project = applyUpdate(projectId, updates);
 
 	// Check if updater is different from original submitter
 	const isOriginalSubmitter = project.submittedBy === issueAuthor;

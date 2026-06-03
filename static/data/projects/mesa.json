@@ -1,0 +1,17 @@
+{
+	"name": "Mesa",
+	"tagline": "Mesa is an open-source Python library for agent-based modeling.",
+	"description": "Mesa is an open-source Python library for agent-based modeling, ideal for simulating complex systems and exploring emergent behaviors.",
+	"tags": [
+		"cycle simulation",
+		"digital-twin",
+		"dynamic-systems",
+		"system-modeling"
+	],
+	"github": "https://github.com/mesa/mesa",
+	"docs": "https://mesa.readthedocs.io/latest/",
+	"pypi": "https://pypi.org/project/Mesa/",
+	"example": "https://mesa.readthedocs.io/stable/examples.html",
+	"id": "mesa",
+	"submittedBy": "jackiekazil"
+}

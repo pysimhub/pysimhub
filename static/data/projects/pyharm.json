@@ -1,0 +1,21 @@
+{
+	"name": "pyHarm",
+	"tagline": "Harmonic Balance code for mechanical vibration systems with nonlinearities",
+	"description": "## pyHarm Basics\npyHarm is a Harmonic Balance Method (HBM)-based solver for mechanical nonlinear system simulations, distributed under the Apache 2.0 license and published on PyPI.\n\n```bash\npip install pyharm-os\n```\n\nThe code is built as a Python package and is designed to support a wide range of studies in nonlinear dynamic simulations. Its main feature is forced response frequency analysis using a harmonic balance solver enhanced with continuation methods. The codebase welcomes external contributions through the merge request process.\n\n## pyHarm Main Features\nThe philosophy behind the code is to treat the mechanical system as an assembly of elementary elements/connectors, so their contributions to the residual and Jacobian can be evaluated independently. It includes state-of-the-art contact and friction models, including coupled contact/friction models, to solve challenging configurations, including industrial use cases.\n\nThe code extensively uses the factory design pattern in its subpackages to provide abstraction and flexibility when developing new components. These components can either be included directly in the package, loaded dynamically in the kernel using the plugin system, or built as independent extension projects that can be loaded when pyHarm is initialized in the kernel.\n\n## Learn About pyHarm\nDocumentation is available on Read the Docs: [documentation link](https://pyharm-saf.readthedocs.io/en/latest/)\n\nA set of [tutorials](https://gitlab.com/drti/pyharm/-/tree/main/Tutorials?ref_type=heads), in the form of Jupyter notebooks, is available directly in the source code to help users learn more about both the harmonic balance simulation method and the package itself.",
+	"tags": [
+		"dynamic-systems",
+		"engineering",
+		"finite-element",
+		"physics",
+		"simulation",
+		"vibration",
+		"nonlinear"
+	],
+	"github": "https://gitlab.com/drti/pyharm",
+	"docs": "https://pyharm-saf.readthedocs.io/en/latest/",
+	"pypi": "https://pypi.org/project/pyHarm-os/",
+	"example": "https://gitlab.com/drti/pyharm/-/tree/main/Tutorials?ref_type=heads",
+	"id": "pyharm",
+	"logo": "/logos/pyharm.png",
+	"submittedBy": "mercierq"
+}

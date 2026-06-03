@@ -6,9 +6,10 @@
  * Used by the process-submission GitHub Action.
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import { dirname } from 'path';
+import { loadProjects, writeProject } from './lib/projects-store.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -200,24 +201,21 @@ function parseSubmission(issueBody) {
 	return project;
 }
 
-function addProjectToFile(project, projectsPath) {
-	const projects = JSON.parse(readFileSync(projectsPath, 'utf-8'));
+function addProject(project) {
+	const projects = loadProjects();
 
 	// Check for duplicates
 	if (projects.some(p => p.id === project.id)) {
 		throw new Error(`Project with ID '${project.id}' already exists`);
 	}
 
-	projects.push(project);
-	writeFileSync(projectsPath, JSON.stringify(projects, null, '\t') + '\n');
-
-	return projects;
+	// Write the project to its own source file
+	writeProject(project);
 }
 
 // Main execution
 const issueBody = process.env.ISSUE_BODY;
 const issueAuthor = process.env.ISSUE_AUTHOR;
-const projectsPath = join(__dirname, '..', 'static', 'data', 'projects.json');
 
 if (!issueBody) {
 	console.error('ISSUE_BODY environment variable is required');
@@ -232,7 +230,7 @@ try {
 		project.submittedBy = issueAuthor;
 	}
 
-	addProjectToFile(project, projectsPath);
+	addProject(project);
 
 	// Output for GitHub Actions
 	console.log(`PROJECT_ID=${project.id}`);

@@ -15,12 +15,12 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { createHash } from 'crypto';
 import { pipeline } from '@huggingface/transformers';
+import { loadProjects } from './lib/projects-store.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const MODEL_ID = 'Xenova/bge-small-en-v1.5';
-const PROJECTS_PATH = join(__dirname, '..', 'static', 'data', 'projects.json');
 const OUTPUT_PATH = join(__dirname, '..', 'static', 'data', 'embeddings.json');
 
 const forceAll = process.argv.includes('--force');
@@ -37,7 +37,7 @@ function hashText(text) {
 }
 
 async function main() {
-	const projects = JSON.parse(readFileSync(PROJECTS_PATH, 'utf-8'));
+	const projects = loadProjects();
 	const projectIds = new Set(projects.map((p) => p.id));
 
 	// Load existing embeddings if available

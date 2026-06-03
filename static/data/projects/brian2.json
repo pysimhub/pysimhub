@@ -1,0 +1,22 @@
+{
+	"name": "Brian2",
+	"tagline": "A simulator for spiking neural networks.",
+	"description": "The “Brian” simulator is a simulation software for biological spiking neural networks. Neuroscientists write their model in a high-level language (Python) with a simple syntax based on mathematical equations and physical units. Behind the scenes, Brian converts users’ high-level code into efficient, low-level code to run the simulation. The software therefore allows users to easily write models without sacrificing computational efficiency. This unique mix of user-friendliness and efficiency has made it a standard tool for computational neuroscientists worldwide. Brian is used for research and teaching, and is embedded in an ecosystem of supplementary software packages. These packages include convenience tools for plotting, model import/export, and model fitting, computational backends adding support for hardware platforms such as GPUs, and domain-specific frameworks, e.g. for simulating optogenetic experiments.\n\nBrian has been in continual development since 2007, with a major rewrite as \"Brian2\" in 2014.",
+	"tags": [
+		"system-modeling",
+		"network",
+		"spiking neural network",
+		"snn",
+		"neuroscience",
+		"computational neuroscience"
+	],
+	"github": "https://github.com/brian-team/brian2",
+	"docs": "https://brian2.readthedocs.org",
+	"pypi": "https://pypi.org/project/Brian2/",
+	"condaForge": "https://anaconda.org/channels/conda-forge/packages/brian2/overview",
+	"homepage": "https://briansimulator.org",
+	"example": "https://briansimulator.org/getting-started/",
+	"id": "brian2",
+	"logo": "/logos/brian2.png",
+	"submittedBy": "mstimberg"
+}

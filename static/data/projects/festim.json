@@ -1,0 +1,18 @@
+{
+	"name": "FESTIM",
+	"tagline": "Simulate hydrogen transport in materials",
+	"description": "FESTIM is a Python library for simulating hydrogen transport in materials. It leverages the finite element package FEniCS and provides an intuitive interface for solving complex problems.",
+	"tags": [
+		"engineering",
+		"finite-element",
+		"physics",
+		"hydrogen"
+	],
+	"github": "https://github.com/festim-dev/FESTIM",
+	"docs": "https://festim.readthedocs.io/en/latest/",
+	"pypi": "https://pypi.org/project/FESTIM/",
+	"condaForge": "https://anaconda.org/channels/conda-forge/packages/festim/overview",
+	"example": "https://festim-workshop.readthedocs.io/en/latest/intro.html",
+	"id": "festim",
+	"submittedBy": "RemDelaporteMathurin"
+}

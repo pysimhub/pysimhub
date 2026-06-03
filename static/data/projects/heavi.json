@@ -1,0 +1,19 @@
+{
+	"name": "Heavi",
+	"tagline": "A python based circuit simulator for linear devices only (frequency domain)",
+	"description": "Heavi is a purely python based circuit simulator for linear RF components. It computes S-parameters in the frequency domain. The library is entirely written in Python and accelerated with Numba. It implements the Modified Nodal Analysis (MNA) for circuit simulations as does software like Qucs and others. You can import Touchstone files and describe arbitrarily complex networks. \n\nHeavi currently does not have a working time domain solver.",
+	"tags": [
+		"engineering",
+		"microwave",
+		"radio-frequency",
+		"rf",
+		"circuit"
+	],
+	"github": "https://github.com/FennisRobert/heavi",
+	"docs": "https://github.com/FennisRobert/heavi/wiki",
+	"pypi": "https://pypi.org/project/heavi",
+	"homepage": "https://www.emerge-software.com",
+	"example": "https://github.com/FennisRobert/heavi/tree/main/examples",
+	"id": "heavi",
+	"submittedBy": "FennisRobert"
+}

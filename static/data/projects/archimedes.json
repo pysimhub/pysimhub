@@ -1,0 +1,20 @@
+{
+	"name": "Archimedes",
+	"tagline": "A Python framework for developing and deploying control systems",
+	"description": "Archimedes is an open-source Python framework designed for deployment of control systems to hardware. To make this possible, it provides a comprehensive toolkit for modeling, simulation, optimization, and C code generation.  Archimedes builds on the powerful symbolic computation capabilities of [CasADi](https://web.casadi.org/docs/) with a modern interface designed to be familiar to users of NumPy, JAX, and PyTorch.",
+	"tags": [
+		"control",
+		"digital-twin",
+		"dynamic-systems",
+		"engineering",
+		"system-modeling",
+		"transient"
+	],
+	"github": "https://github.com/PineTreeLabs/archimedes",
+	"docs": "https://pinetreelabs.github.io/archimedes/",
+	"pypi": "https://pypi.org/project/archimedes/",
+	"example": "https://pinetreelabs.github.io/archimedes/getting-started.html",
+	"id": "archimedes",
+	"logo": "/logos/archimedes.png",
+	"submittedBy": "jcallaham"
+}

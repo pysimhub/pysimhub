@@ -1,0 +1,22 @@
+{
+	"name": "EMerge",
+	"tagline": "EMerge is a Python based finite element solver for electromagnetic waves",
+	"description": "EMerge is a purely Python based finite element simulation library for electromagnetic waves. It offers similar features to software like CST, HFSS and Comsol Multiphysics. The entire process from geometry creation, meshing, boundary-condition setup, solving and post-processing can all be done in one and the same Python script.\n\nIt leverages fast C-optimized libraries like GMSH (OCC Geometry kernal), Scipy/Numpy for sparse data formatting, Numba for parallel accellerated assembly and SuperLU, UMFPACK, CuDSS for sparse linear solves.",
+	"tags": [
+		"engineering",
+		"finite-element",
+		"microwave",
+		"physics",
+		"rf",
+		"radio-frequency",
+		"electromagnetic"
+	],
+	"github": "https://github.com/FennisRobert/EMerge",
+	"docs": "https://emerge-software.com/resources",
+	"pypi": "https://pypi.org/project/emerge",
+	"homepage": "https://www.emerge-software.com",
+	"example": "https://github.com/FennisRobert/EMerge/tree/main/examples",
+	"id": "emerge",
+	"logo": "/logos/emerge.png",
+	"submittedBy": "FennisRobert"
+}

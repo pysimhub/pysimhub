@@ -1,0 +1,23 @@
+{
+	"name": "Thermal Engineering Systems in Python: TESPy",
+	"tagline": "A simulation framework in thermal engineering for systems like power plants, heat pumps or refrigeration machines",
+	"description": "TESPy allows you to model component based thermodynamic cycles with an equation oriented solver. With a steady state simulation you can design a process and run  offdesign calculations of your plant using underlying characteristics for each of the plant's components. The package includes basic components, such as turbines, pumps, compressors, heat exchangers, pipes, mixers and splitters as well as advanced components (derivatives of heat exchangers, drum). Due to its flexible design you can implement your own components easily, inject custom constraints or switch to different fluid property databases.",
+	"tags": [
+		"engineering",
+		"physics",
+		"system-modeling",
+		"thermodynamics",
+		"cycle simulation",
+		"refrigeration",
+		"heating",
+		"powerplant"
+	],
+	"github": "https://github.com/oemof/tespy",
+	"docs": "https://tespy.readthedocs.io/",
+	"pypi": "https://pypi.org/project/tespy/",
+	"condaForge": "https://anaconda.org/channels/conda-forge/packages/tespy/overview",
+	"example": "https://tespy.readthedocs.io/en/main/basic_tutorials.html",
+	"id": "thermal-engineering-systems-in-python-tespy",
+	"logo": "/logos/thermal-engineering-systems-in-python-tespy.svg",
+	"submittedBy": "fwitte"
+}

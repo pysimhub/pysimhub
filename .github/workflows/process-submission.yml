@@ -104,7 +104,7 @@ jobs:
             ---
             Closes #${{ steps.issue.outputs.number }}
           commit-message: "Add ${{ steps.process.outputs.name }} to projects"
-          add-paths: static/data/projects.json
+          add-paths: static/data/projects
 
       - name: Comment on issue (success)
         if: steps.pr.outputs.pull-request-number

@@ -9,14 +9,10 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { loadProjects } from './lib/projects-store.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-function loadProjects() {
-	const projectsPath = join(__dirname, '..', 'static', 'data', 'projects.json');
-	return JSON.parse(readFileSync(projectsPath, 'utf-8'));
-}
 
 function getUniqueTags(projects) {
 	const tagsSet = new Set();

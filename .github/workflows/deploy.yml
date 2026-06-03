@@ -4,7 +4,7 @@ on:
   push:
     branches: ['main']
     paths-ignore:
-      - 'static/data/projects.json'
+      - 'static/data/projects/**'
   workflow_run:
     workflows: ['Update Data']
     types: [completed]

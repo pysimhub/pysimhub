@@ -1,0 +1,21 @@
+{
+	"id": "pathsim",
+	"name": "PathSim",
+	"tagline": "A dynamical system simulation framework in the block diagram paradigm",
+	"description": "PathSim is a Python-native framework for modeling and simulating dynamical systems using block diagrams. It provides an intuitive API for building complex system models from interconnected blocks, supporting both continuous-time and discrete-time simulations. Designed for control systems, digital twins, and system-level modeling with a focus on ease of use and extensibility.",
+	"tags": [
+		"block-diagram",
+		"digital-twin",
+		"dynamic-systems",
+		"control",
+		"system-modeling",
+		"transient"
+	],
+	"logo": "/logos/pathsim.png",
+	"github": "https://github.com/pathsim/pathsim",
+	"docs": "https://docs.pathsim.org",
+	"pypi": "https://pypi.org/project/pathsim/",
+	"condaForge": "https://anaconda.org/channels/conda-forge/packages/pathsim/overview",
+	"example": "https://view.pathsim.org",
+	"homepage": "https://pathsim.org"
+}

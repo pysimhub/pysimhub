@@ -1,0 +1,20 @@
+{
+	"name": "CoSApp",
+	"tagline": "CoSApp: a Python library to create, simulate and design complex systems",
+	"description": "# CoSApp - Collaborative System Approach\n\nThe primary goal of **CoSApp** is to help technical departments in the design of complex systems.\nTo do so, the framework allows the simulation of various systems representing the different parts of the final product in a common environment.\nThe benefit is the ability for each subsystem team to carry out design study with a direct feedback at product level.\n\nThe main features are:",
+	"tags": [
+		"digital-twin",
+		"engineering",
+		"simulation",
+		"system-modeling",
+		"transient"
+	],
+	"github": "https://gitlab.com/cosapp/cosapp",
+	"docs": "https://cosapp.readthedocs.io/en/latest/",
+	"pypi": "https://pypi.org/project/cosapp/",
+	"condaForge": "https://anaconda.org/conda-forge/cosapp",
+	"example": "https://cosapp.readthedocs.io/en/latest/tutorials/00-Introduction.html#Tutorials",
+	"id": "cosapp",
+	"logo": "/logos/cosapp.png",
+	"submittedBy": "huche6"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "Pymunk",
+	"tagline": "Pymunk is a easy-to-use pythonic 2d physics library that can be used whenever you need 2d rigid body physics from Python",
+	"description": "Pymunk is an easy-to-use pythonic 2D physics library that can be used whenever you need 2D rigid body physics from Python. Perfect when you need 2D physics in your game, demo or simulation! It is built on top of Munk2D, a fork of the very capable 2D physics library [Chipmunk2D](http://chipmunk-physics.net/).\n\nThe first version was released in 2007 and Pymunk is still actively developed and maintained today, more than 15 years of active development!\n\nPymunk has been used with success in many projects, big and small. For example: 3 Pyweek game competition winners, dozens of published scientific papers and even in a self-driving car simulation! See the Showcases section on the Pymunk webpage for some examples.",
+	"tags": [
+		"physics"
+	],
+	"github": "https://github.com/viblo/pymunk",
+	"docs": "https://www.pymunk.org",
+	"pypi": "https://pypi.org/project/pymunk/",
+	"condaForge": "https://anaconda.org/conda-forge/pymunk",
+	"homepage": "https://www.pymunk.org",
+	"id": "pymunk",
+	"logo": "/logos/pymunk.png",
+	"submittedBy": "viblo"
+}

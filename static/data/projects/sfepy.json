@@ -1,0 +1,17 @@
+{
+	"name": "SfePy",
+	"tagline": "Simple finite elements in Python",
+	"description": "SfePy is a software for solving systems of coupled partial differential equations (PDEs) by the finite element method and its variants in 1D, 2D and 3D. It can be viewed both as black-box PDE solver, and as a Python package which can be used for building custom applications.",
+	"tags": [
+		"engineering",
+		"finite-element",
+		"homogenization"
+	],
+	"github": "https://github.com/sfepy/sfepy",
+	"docs": "https://sfepy.org",
+	"pypi": "https://pypi.org/project/sfepy/",
+	"condaForge": "https://anaconda.org/conda-forge/sfepy",
+	"id": "sfepy",
+	"logo": "/logos/sfepy.png",
+	"submittedBy": "rc"
+}

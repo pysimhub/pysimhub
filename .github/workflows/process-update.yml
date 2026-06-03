@@ -76,7 +76,7 @@ jobs:
             ---
             Closes #${{ steps.issue.outputs.number }}
           commit-message: "Update ${{ steps.process.outputs.name }} project data"
-          add-paths: static/data/projects.json
+          add-paths: static/data/projects
 
       - name: Comment on issue (success)
         if: steps.pr.outputs.pull-request-number

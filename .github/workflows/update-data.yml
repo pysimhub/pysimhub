@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'static/data/projects.json'
+      - 'static/data/projects/**'
   workflow_dispatch:
 
 jobs:
@@ -49,6 +49,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add static/data/github-cache.json static/data/projects.json static/data/embeddings.json static/logos/ .github/ISSUE_TEMPLATE/
+          git add static/data/github-cache.json static/data/projects/ static/data/embeddings.json static/logos/ .github/ISSUE_TEMPLATE/
           git diff --staged --quiet || git commit -m "chore: update GitHub data cache"
           git push

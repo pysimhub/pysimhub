@@ -1,0 +1,21 @@
+{
+	"name": "JuPedSim",
+	"tagline": "JuPedSim is a Python package with a C++ core to simulate pedestrian dynamics",
+	"description": "**JuPedSim** is an open-source library for simulating the dynamics of pedestrians and crowds. It models how individual agents move through a walkable geometry, react to one another, and route toward exits, making it suitable for studying evacuations, crowd management, and the design of buildings, transport hubs, and public spaces.\n \n### Features\n- **Python-first API** over a high-performance C++ core — set up geometries,\n    spawn agents, define routes, and step the simulation entirely from Python.\n- **Multiple operational models**, including the Social Force Model.\n- **Flexible routing** via *journeys* and *stages* (waypoints, exits, waiting\n    areas) with support for probabilistic and conditional transitions, so agents\n    can follow alternative paths through the same geometry.\n- Comes with a web-based frontend https://app.jupedsim.org\n\n  ### Use cases\n\n  Evacuation-time studies, route-choice and bottleneck analysis, capacity\n  planning, and reproducible research in pedestrian dynamics.",
+	"tags": [
+		"physics",
+		"simulation",
+		"pedestrian dynamics",
+		"crowd simulation",
+		"evacuation",
+		"crowd management"
+	],
+	"github": "https://github.com/PedestrianDynamics/jupedsim",
+	"docs": "https://www.jupedsim.org",
+	"pypi": "https://pypi.org/project/jupedsim/",
+	"homepage": "https://www.jupedsim.org",
+	"example": "https://www.jupedsim.org/stable/notebooks/getting_started.html",
+	"id": "jupedsim",
+	"logo": "/logos/jupedsim.svg",
+	"submittedBy": "chraibi"
+}

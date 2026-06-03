@@ -1,0 +1,15 @@
+{
+	"name": "Lcapy",
+	"tagline": "Linear circuit analysis and symbolic signal processing",
+	"description": "Lcapy is a Python package for linear circuit analysis.  It uses SymPy\nfor symbolic mathematics and Circuitikz to draw schematics.",
+	"tags": [
+		"circuit",
+		"control",
+		"system-modeling"
+	],
+	"github": "https://github.com/mph-/lcapy",
+	"docs": "https://lcapy.readthedocs.io/en/latest/overview.html",
+	"pypi": "https://pypi.org/project/lcapy/",
+	"id": "lcapy",
+	"submittedBy": "mph-"
+}

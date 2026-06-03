@@ -1,0 +1,20 @@
+{
+	"id": "scikit-rf",
+	"name": "scikit-rf",
+	"tagline": "Open Source Python package for RF/Microwave engineering",
+	"description": "Created in 2009, scikit-rf (aka skrf) is a free, open-source Python library designed to make radio frequency (RF) engineering both reliable and accessible. scikit-rf is used worldwide in industry and research across sectors such as space, defense, telecommunications, and electronics. In a domain previously dominated by commercial software, scikit-rf, with over 2 million downloads and more than a hundred citations in scientific literature, has become a reference library for the analysis of radio frequency devices. In November 2024, the French Ministry of Higher Education and Research awarded the Open Science Prize for Open-Source Research Software to the scikit-rf project.",
+	"tags": [
+		"rf",
+		"microwave",
+		"visualization",
+		"system-modeling",
+		"engineering"
+	],
+	"logo": "/logos/scikit-rf.svg",
+	"github": "https://github.com/scikit-rf/scikit-rf",
+	"homepage": "https://scikit-rf.org/",
+	"docs": "https://scikit-rf.readthedocs.io",
+	"pypi": "https://pypi.org/project/scikit-rf/",
+	"condaForge": "https://anaconda.org/conda-forge/scikit-rf",
+	"example": "https://scikit-rf.readthedocs.io/en/latest/tutorials/Introduction.html"
+}

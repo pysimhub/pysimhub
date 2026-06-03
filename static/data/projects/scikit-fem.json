@@ -1,0 +1,15 @@
+{
+	"name": "scikit-fem",
+	"tagline": "Simple finite element assemblers",
+	"description": "The purpose of scikit-fem is to simplify the creation of finite element matrices, i.e., the finite element assembly. It can be used as a component to create finite element solvers for a wide variety of partial differential equations. It supports the most popular 1D, 2D and 3D mesh types and elements, and in addition implements some of the more exotic elements, e.g., for $H(div)$ and $H(curl)$ conforming saddle point problems and $H^2$ conforming elliptic problems.",
+	"tags": [
+		"finite-element"
+	],
+	"github": "https://github.com/kinnala/scikit-fem",
+	"docs": "https://scikit-fem.readthedocs.io",
+	"pypi": "https://pypi.org/project/scikit-fem/",
+	"condaForge": "https://anaconda.org/channels/conda-forge/packages/scikit-fem/overview",
+	"id": "scikit-fem",
+	"logo": "/logos/scikit-fem.png",
+	"submittedBy": "kinnala"
+}

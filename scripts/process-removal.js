@@ -6,9 +6,10 @@
  * Used by the process-removal GitHub Action.
  */
 
-import { readFileSync, writeFileSync, unlinkSync, existsSync } from 'fs';
+import { writeFileSync, unlinkSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { loadProjects, deleteProjectFile } from './lib/projects-store.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -45,16 +46,14 @@ function parseRemoval(issueBody) {
 	return { projectId, reasonType, reasonDetails };
 }
 
-function removeProject(projectId, projectsPath, logosDir) {
-	const projects = JSON.parse(readFileSync(projectsPath, 'utf-8'));
+function removeProject(projectId, logosDir) {
+	const projects = loadProjects();
 
 	// Find the project
-	const projectIndex = projects.findIndex(p => p.id === projectId);
-	if (projectIndex === -1) {
+	const project = projects.find(p => p.id === projectId);
+	if (!project) {
 		throw new Error(`Project with ID '${projectId}' not found`);
 	}
-
-	const project = projects[projectIndex];
 
 	// Remove logo file if it exists locally
 	if (project.logo && project.logo.startsWith('/logos/')) {
@@ -66,11 +65,8 @@ function removeProject(projectId, projectsPath, logosDir) {
 		}
 	}
 
-	// Remove the project from the array
-	projects.splice(projectIndex, 1);
-
-	// Write back
-	writeFileSync(projectsPath, JSON.stringify(projects, null, '\t') + '\n');
+	// Remove the project's source file
+	deleteProjectFile(projectId);
 
 	return project;
 }
@@ -78,7 +74,6 @@ function removeProject(projectId, projectsPath, logosDir) {
 // Main execution
 const issueBody = process.env.ISSUE_BODY;
 const issueAuthor = process.env.ISSUE_AUTHOR;
-const projectsPath = join(__dirname, '..', 'static', 'data', 'projects.json');
 const logosDir = join(__dirname, '..', 'static', 'logos');
 
 if (!issueBody) {
@@ -88,7 +83,7 @@ if (!issueBody) {
 
 try {
 	const { projectId, reasonType, reasonDetails } = parseRemoval(issueBody);
-	const project = removeProject(projectId, projectsPath, logosDir);
+	const project = removeProject(projectId, logosDir);
 
 	// Output for GitHub Actions
 	console.log(`PROJECT_ID=${projectId}`);

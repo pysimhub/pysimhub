@@ -1,0 +1,22 @@
+{
+	"name": "AutoEmulate",
+	"tagline": "Emulate simulations easily",
+	"description": "AutoEmulate is a Python library that makes it easy to create accurate and efficient emulators for complex simulations. Under the hood, the package runs a complete machine learning pipeline to compare and optimise a wide range of models, and provides functions for downstream tasks like prediction, sensitivity analysis and calibration.",
+	"tags": [
+		"digital-twin",
+		"engineering",
+		"physics",
+		"emulation",
+		"sensitivity analysis",
+		"calibration",
+		"uncertainty quantification"
+	],
+	"github": "https://github.com/alan-turing-institute/autoemulate",
+	"docs": "https://alan-turing-institute.github.io/autoemulate/",
+	"pypi": "https://pypi.org/project/autoemulate/",
+	"homepage": "https://www.autoemulate.com",
+	"example": "https://alan-turing-institute.github.io/autoemulate/tutorials/index.html",
+	"id": "autoemulate",
+	"logo": "/logos/autoemulate.png",
+	"submittedBy": "radka-j"
+}

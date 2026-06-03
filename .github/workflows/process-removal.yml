@@ -77,7 +77,7 @@ jobs:
             Closes #${{ steps.issue.outputs.number }}
           commit-message: "Remove ${{ steps.process.outputs.name }} from projects"
           add-paths: |
-            static/data/projects.json
+            static/data/projects
             static/logos
 
       - name: Comment on issue (success)

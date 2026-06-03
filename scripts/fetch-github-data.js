@@ -16,9 +16,10 @@
  * Public repos work without tokens, just with lower rate limits.
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { loadProjects } from './lib/projects-store.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -188,8 +189,7 @@ async function main() {
 	console.log(hasGitLabToken ? 'GitLab: authenticated' : 'GitLab: unauthenticated - set GITLAB_TOKEN for more');
 	console.log('');
 
-	const projectsPath = join(__dirname, '..', 'static', 'data', 'projects.json');
-	const projects = JSON.parse(readFileSync(projectsPath, 'utf-8'));
+	const projects = loadProjects();
 
 	const githubData = {};
 

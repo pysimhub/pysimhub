@@ -5,17 +5,17 @@
  * Updates projects.json with local paths.
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { loadProjects, writeProject } from './lib/projects-store.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 async function main() {
-	const projectsPath = join(__dirname, '..', 'static', 'data', 'projects.json');
 	const logosDir = join(__dirname, '..', 'static', 'logos');
-	const projects = JSON.parse(readFileSync(projectsPath, 'utf-8'));
+	const projects = loadProjects();
 
 	let updated = false;
 
@@ -54,6 +54,7 @@ async function main() {
 				writeFileSync(filepath, buffer);
 
 				project.logo = `/logos/${filename}`;
+				writeProject(project);
 				updated = true;
 				console.log(`  Saved to ${filepath}`);
 			} catch (e) {
@@ -63,8 +64,7 @@ async function main() {
 	}
 
 	if (updated) {
-		writeFileSync(projectsPath, JSON.stringify(projects, null, '\t') + '\n');
-		console.log('Updated projects.json with local logo paths');
+		console.log('Updated project files with local logo paths');
 	} else {
 		console.log('No logos to download');
 	}
