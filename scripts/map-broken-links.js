@@ -40,33 +40,50 @@ function extractUrlsFromMarkdown(text) {
 	return [...new Set(urls)]; // dedupe
 }
 
+function isHttpUrl(url) {
+	return typeof url === 'string' && /^https?:\/\//.test(url);
+}
+
+/**
+ * Extract genuinely broken external links from lychee's JSON report.
+ * lychee groups failures per source file under `error_map` (older versions:
+ * `fail_map`). We keep only http(s) URLs, dropping lychee's noise from
+ * unresolved local/root-relative paths (e.g. "/logos/x.png"), which it cannot
+ * resolve on the filesystem but which work fine on the deployed site.
+ */
 function parseLycheeOutput(lycheeOutputPath) {
 	const content = readFileSync(lycheeOutputPath, 'utf-8');
 
-	// Handle both JSON array format and NDJSON (newline-delimited JSON)
+	let parsed;
 	try {
-		const parsed = JSON.parse(content);
-		// If it's the detailed JSON format with fail_map
-		if (parsed.fail_map) {
-			const brokenUrls = [];
-			for (const [source, failures] of Object.entries(parsed.fail_map)) {
-				for (const failure of failures) {
-					brokenUrls.push({
-						url: failure.url,
-						status: failure.status?.code || failure.status || 'unknown',
-						source
-					});
-				}
-			}
-			return brokenUrls;
-		}
-		// Simple array format
-		return parsed;
+		parsed = JSON.parse(content);
 	} catch {
-		// Try NDJSON format (one JSON object per line)
-		const lines = content.trim().split('\n').filter(Boolean);
-		return lines.map(line => JSON.parse(line));
+		// NDJSON fallback (one JSON object per line)
+		const lines = content.trim().split('\n').filter(Boolean).map(line => JSON.parse(line));
+		return dedupeByUrl(lines.filter(e => isHttpUrl(e.url)));
 	}
+
+	const map = parsed.error_map || parsed.fail_map || {};
+	const broken = [];
+	for (const [source, entries] of Object.entries(map)) {
+		for (const entry of entries) {
+			if (!isHttpUrl(entry.url)) continue; // skip unresolved local/relative paths
+			const status = (entry.status && typeof entry.status === 'object')
+				? (entry.status.code || entry.status.text || 'error')
+				: (entry.status || 'error');
+			broken.push({ url: entry.url, status, source });
+		}
+	}
+	return dedupeByUrl(broken);
+}
+
+function dedupeByUrl(links) {
+	const seen = new Set();
+	return links.filter(link => {
+		if (seen.has(link.url)) return false;
+		seen.add(link.url);
+		return true;
+	});
 }
 
 function findProjectForUrl(url, projects) {
@@ -193,24 +210,35 @@ if (!lycheeOutputPath) {
 	process.exit(1);
 }
 
+/** Report the broken-link count to the workflow so it can gate later steps. */
+function setOutput(hasBroken, count) {
+	if (process.env.GITHUB_OUTPUT) {
+		writeFileSync(process.env.GITHUB_OUTPUT, `has_broken=${hasBroken}\ncount=${count}\n`, { flag: 'a' });
+	}
+}
+
 try {
 	const projects = loadProjects();
 	const brokenLinks = parseLycheeOutput(lycheeOutputPath);
 
 	if (brokenLinks.length === 0) {
-		console.log('No broken links found.');
+		console.log('No broken external links found.');
+		setOutput(false, 0);
 		process.exit(0);
 	}
 
+	console.log(`Found ${brokenLinks.length} broken external link(s).`);
 	const issueBody = generateIssueBody(brokenLinks, projects, workflowUrl);
 
-	// Output to file if GITHUB_OUTPUT is set, otherwise print
+	// Output to file if requested, otherwise print
 	if (process.env.ISSUE_BODY_FILE) {
 		writeFileSync(process.env.ISSUE_BODY_FILE, issueBody);
 		console.log(`Issue body written to ${process.env.ISSUE_BODY_FILE}`);
 	} else {
 		console.log(issueBody);
 	}
+
+	setOutput(true, brokenLinks.length);
 } catch (error) {
 	console.error(`Error: ${error.message}`);
 	process.exit(1);
