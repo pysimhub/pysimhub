@@ -7,7 +7,7 @@ on:
   # Run on PRs that modify project data or content
   pull_request:
     paths:
-      - 'static/data/projects.json'
+      - 'static/data/projects/**'
       - 'src/routes/**/*.svelte'
       - 'src/routes/**/*.md'
   # Allow manual trigger
@@ -48,10 +48,10 @@ jobs:
             --exclude "^https://github\.com/pysimhub/pysimhub\.github\.io/issues/new"
             --exclude "^https://anaconda\.org"
             --exclude "^https://pypi\.org"
-            --format json
-            --output lychee-output.json
             './build/**/*.html'
             './static/data/projects.json'
+          format: json
+          output: lychee-output.json
           fail: false
           jobSummary: true
 
