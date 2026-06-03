@@ -5,6 +5,7 @@
 	import { formatNumber } from '$lib/utils/countup';
 	import { selectedTags, resetVisible, openProjectModal } from '$lib/stores/projects';
 	import { formatDate } from '$lib/utils/format';
+	import { getRepoLink } from '$lib/utils/repo';
 	import { fade, scale } from 'svelte/transition';
 	import { Icon } from '$lib/components/icons';
 	import { Avatar, Badge, Tooltip } from '$lib/components/ui';
@@ -24,6 +25,9 @@
 	});
 
 	const descriptionHtml = $derived(project.description ? marked.parse(project.description) : '');
+
+	// Repo link adapts its icon/label to the provider (GitHub or GitLab)
+	const repoLink = $derived(getRepoLink(project.github));
 
 	function toggleTag(tag: string) {
 		// If not on home page, navigate to home with this tag and keep modal open
@@ -177,8 +181,8 @@
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm text-[var(--color-text-muted)] transition-colors hover:bg-[var(--color-bg-hover)] hover:text-[var(--color-text-primary)]"
 					>
-						<Icon name="github" size="sm" />
-						GitHub
+						<Icon name={repoLink.icon} size="sm" />
+						{repoLink.label}
 					</a>
 
 					{#if project.docs}

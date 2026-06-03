@@ -5,6 +5,7 @@
 	import { formatNumber } from '$lib/utils/countup';
 	import { selectedTags, resetVisible, openProjectModal } from '$lib/stores/projects';
 	import { formatDate, isRecentDate } from '$lib/utils/format';
+	import { getRepoLink } from '$lib/utils/repo';
 	import { Icon } from '$lib/components/icons';
 	import { Avatar, Badge, Tooltip } from '$lib/components/ui';
 
@@ -53,15 +54,18 @@
 
 	const hasRecentRelease = $derived(isRecentDate(project.lastRelease, 30));
 
+	// Repo link adapts its icon/label to the provider (GitHub or GitLab)
+	const repoLink = $derived(getRepoLink(project.github));
+
 	// All available links
 	const allLinks = $derived([
-		{ key: 'github', href: project.github, icon: 'github' as const, label: 'GitHub' },
+		{ key: 'repo', href: project.github, icon: repoLink.icon, label: repoLink.label },
 		project.docs ? { key: 'docs', href: project.docs, icon: 'docs' as const, label: 'Docs' } : null,
 		project.pypi ? { key: 'pypi', href: project.pypi, icon: 'package' as const, label: 'PyPI' } : null,
 		project.condaForge ? { key: 'conda', href: project.condaForge, icon: 'package' as const, label: 'conda-forge' } : null,
 		project.homepage ? { key: 'home', href: project.homepage, icon: 'globe' as const, label: 'Website' } : null,
 		project.example ? { key: 'example', href: project.example, icon: 'play' as const, label: 'Example' } : null,
-	].filter(Boolean) as Array<{ key: string; href: string; icon: 'github' | 'docs' | 'package' | 'globe' | 'play'; label: string }>);
+	].filter(Boolean) as Array<{ key: string; href: string; icon: 'github' | 'gitlab' | 'docs' | 'package' | 'globe' | 'play'; label: string }>);
 </script>
 
 <!-- svelte-ignore a11y_no_noninteractive_element_to_interactive_role -->

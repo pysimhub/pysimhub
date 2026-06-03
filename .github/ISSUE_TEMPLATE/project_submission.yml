@@ -119,7 +119,8 @@ body:
   - type: input
     id: github
     attributes:
-      label: GitHub Repository
+      label: Repository
+      description: GitHub or GitLab repository URL. Stars, releases and the avatar are fetched automatically.
       placeholder: "https://github.com/pathsim/pathsim"
     validations:
       required: true
@@ -167,4 +168,4 @@ body:
     id: logo
     attributes:
       label: Logo
-      description: Drag and drop a square image (PNG/SVG), or paste a URL. Falls back to GitHub avatar.
+      description: Drag and drop a square image (PNG/SVG), or paste a URL. Falls back to the repository avatar (GitHub or GitLab).

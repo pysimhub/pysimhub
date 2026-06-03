@@ -146,10 +146,10 @@ function parseSubmission(issueBody) {
 		throw new Error('At least one tag is required');
 	}
 
-	// Extract URLs
-	project.github = extractField(issueBody, 'GitHub Repository');
+	// Extract URLs (the field still stores any repo URL; GitHub or GitLab)
+	project.github = extractField(issueBody, 'Repository');
 	if (!project.github) {
-		throw new Error('GitHub Repository is required');
+		throw new Error('Repository is required');
 	}
 
 	const docs = extractField(issueBody, 'Documentation');
