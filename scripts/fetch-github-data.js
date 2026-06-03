@@ -16,7 +16,7 @@
  * Public repos work without tokens, just with lower rate limits.
  */
 
-import { writeFileSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { loadProjects } from './lib/projects-store.js';
@@ -190,8 +190,21 @@ async function main() {
 	console.log('');
 
 	const projects = loadProjects();
+	const cachePath = join(__dirname, '..', 'static', 'data', 'github-cache.json');
 
-	const githubData = {};
+	// Start from the existing cache so a transient API failure keeps the
+	// previous data for that project instead of dropping it from the site.
+	let githubData = {};
+	if (existsSync(cachePath)) {
+		try {
+			githubData = JSON.parse(readFileSync(cachePath, 'utf-8'));
+		} catch {
+			console.warn('Could not parse existing cache, starting fresh');
+		}
+	}
+
+	let fetched = 0;
+	let keptStale = 0;
 
 	for (const project of projects) {
 		const provider = getProvider(project.github);
@@ -205,23 +218,37 @@ async function main() {
 			const data = provider === 'gitlab' ? await fetchGitLab(project) : await fetchGitHub(project);
 			if (data) {
 				githubData[project.id] = data;
+				fetched++;
 				const versionInfo = data.releaseVersion ? ` (${data.releaseVersion})` : '';
 				console.log(`  ✓ ${data.stars} stars${versionInfo}`);
+			} else if (githubData[project.id]) {
+				keptStale++;
+				console.warn(`  ✗ Fetch returned nothing, keeping cached data for ${project.name}`);
 			} else {
-				console.warn(`  ✗ Failed to fetch repo data`);
+				console.warn(`  ✗ Failed to fetch repo data and no cached data exists`);
 			}
 		} catch (error) {
-			console.error(`  ✗ Error fetching ${project.name}:`, error.message);
+			if (githubData[project.id]) {
+				keptStale++;
+				console.warn(`  ✗ Error fetching ${project.name} (${error.message}), keeping cached data`);
+			} else {
+				console.error(`  ✗ Error fetching ${project.name}:`, error.message);
+			}
 		}
 
 		// Small delay to be nice to the APIs
 		await new Promise(resolve => setTimeout(resolve, 100));
 	}
 
-	const cachePath = join(__dirname, '..', 'static', 'data', 'github-cache.json');
+	// Prune cache entries for projects that no longer exist
+	const ids = new Set(projects.map(p => p.id));
+	for (const id of Object.keys(githubData)) {
+		if (!ids.has(id)) delete githubData[id];
+	}
+
 	writeFileSync(cachePath, JSON.stringify(githubData, null, '\t'));
 	console.log(`\nWrote cache to ${cachePath}`);
-	console.log(`Cached ${Object.keys(githubData).length}/${projects.length} projects`);
+	console.log(`${fetched} fetched, ${keptStale} kept from cache, ${Object.keys(githubData).length}/${projects.length} total cached`);
 }
 
 main().catch(console.error);

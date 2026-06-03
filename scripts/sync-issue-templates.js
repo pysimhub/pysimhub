@@ -32,7 +32,7 @@ function syncTagCheckboxes(templatePath, tags) {
 	let template = readFileSync(templatePath, 'utf-8');
 
 	// Build checkbox options YAML
-	const checkboxOptions = tags.map(tag => `        - label: ${tag}`).join('\n');
+	const checkboxOptions = tags.map(tag => `        - label: "${tag}"`).join('\n');
 
 	// Replace the options under "id: tags" checkbox section
 	template = template.replace(
@@ -74,7 +74,7 @@ function syncUpdateTemplate(projects, tags) {
 	);
 
 	// Sync tag checkboxes
-	const checkboxOptions = tags.map(tag => `        - label: ${tag}`).join('\n');
+	const checkboxOptions = tags.map(tag => `        - label: "${tag}"`).join('\n');
 
 	template = template.replace(
 		/(id: tags\n[\s\S]*?options:\n)([\s\S]*?)(\n\n  - type:)/,

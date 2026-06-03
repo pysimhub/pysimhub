@@ -10,6 +10,7 @@ import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { loadProjects, writeProject } from './lib/projects-store.js';
+import { sanitizeTag, normalizeRepoUrl, validateProject } from './lib/validate.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -137,11 +138,12 @@ function parseSubmission(issueBody) {
 	// Extract tags from checkboxes
 	const checkedTags = extractCheckedTags(issueBody, 'Select all tags that apply');
 	const customTagsRaw = extractField(issueBody, 'Additional Tags');
-	const customTags = customTagsRaw
-		? customTagsRaw.split(',').map(t => t.trim().toLowerCase()).filter(Boolean)
-		: [];
+	const customTags = customTagsRaw ? customTagsRaw.split(',') : [];
 
-	project.tags = [...new Set([...checkedTags, ...customTags])];
+	// Sanitize every tag to the allowed charset so custom tags can't corrupt
+	// the generated issue templates (see sync-issue-templates.js).
+	const tags = [...checkedTags, ...customTags].map(sanitizeTag).filter(Boolean);
+	project.tags = [...new Set(tags)];
 
 	if (project.tags.length === 0) {
 		throw new Error('At least one tag is required');
@@ -190,6 +192,9 @@ function parseSubmission(issueBody) {
 
 	// Generate ID from name
 	project.id = project.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+	if (!project.id) {
+		throw new Error(`Could not derive a valid project id from the name "${project.name}". Please use a name with letters or numbers.`);
+	}
 
 	// Extract logo
 	const logoContent = extractField(issueBody, 'Logo');
@@ -204,9 +209,16 @@ function parseSubmission(issueBody) {
 function addProject(project) {
 	const projects = loadProjects();
 
-	// Check for duplicates
+	// Check for duplicate id
 	if (projects.some(p => p.id === project.id)) {
 		throw new Error(`Project with ID '${project.id}' already exists`);
+	}
+
+	// Check for duplicate repository (same repo submitted under a different name)
+	const repoKey = normalizeRepoUrl(project.github);
+	const existingRepo = projects.find(p => normalizeRepoUrl(p.github) === repoKey);
+	if (existingRepo) {
+		throw new Error(`Repository ${project.github} is already listed as "${existingRepo.name}"`);
 	}
 
 	// Write the project to its own source file
@@ -228,6 +240,12 @@ try {
 	// Store the submitter's GitHub handle
 	if (issueAuthor) {
 		project.submittedBy = issueAuthor;
+	}
+
+	// Final guard: the assembled project must satisfy the data schema
+	const schemaErrors = validateProject(project);
+	if (schemaErrors.length > 0) {
+		throw new Error(`Invalid project data:\n\n${schemaErrors.join('\n')}`);
 	}
 
 	addProject(project);

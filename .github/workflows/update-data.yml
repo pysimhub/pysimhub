@@ -10,6 +10,10 @@ on:
       - 'static/data/projects/**'
   workflow_dispatch:
 
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
 jobs:
   update-data:
     # Skip if triggered by bot to prevent loops
@@ -27,9 +31,10 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Fetch GitHub data
+      - name: Fetch repository data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: node scripts/fetch-github-data.js
         timeout-minutes: 5
 
@@ -50,5 +55,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add static/data/github-cache.json static/data/projects/ static/data/embeddings.json static/logos/ .github/ISSUE_TEMPLATE/
-          git diff --staged --quiet || git commit -m "chore: update GitHub data cache"
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "chore: update GitHub data cache"
+          git pull --rebase origin main
           git push
