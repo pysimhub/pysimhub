@@ -10,6 +10,7 @@ import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { loadProjects, writeProject } from './lib/projects-store.js';
+import { sanitizeTag } from './lib/validate.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -150,14 +151,12 @@ function parseUpdate(issueBody) {
 	if (homepage) updates.homepage = homepage;
 	if (example) updates.example = example;
 
-	// Tags from checkboxes
+	// Tags from checkboxes (sanitized to the allowed charset)
 	const checkedTags = extractCheckedTags(issueBody, 'Select new tags');
 	const customTagsRaw = extractField(issueBody, 'Additional Tags');
-	const customTags = customTagsRaw
-		? customTagsRaw.split(',').map(t => t.trim().toLowerCase()).filter(Boolean)
-		: [];
+	const customTags = customTagsRaw ? customTagsRaw.split(',') : [];
 
-	const allTags = [...checkedTags, ...customTags];
+	const allTags = [...new Set([...checkedTags, ...customTags].map(sanitizeTag).filter(Boolean))];
 	if (allTags.length > 0) {
 		updates.tags = allTags;
 	}

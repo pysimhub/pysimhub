@@ -1,0 +1,24 @@
+name: Validate Project Data
+
+on:
+  pull_request:
+    paths:
+      - 'static/data/projects/**'
+      - 'scripts/lib/**'
+      - 'scripts/validate-projects.js'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+
+      - name: Validate project data
+        run: node scripts/validate-projects.js

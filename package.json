@@ -5,6 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"build:projects": "node scripts/build-projects.js",
+		"validate": "node scripts/validate-projects.js",
 		"predev": "node scripts/build-projects.js",
 		"dev": "vite dev",
 		"prebuild": "node scripts/build-projects.js",
