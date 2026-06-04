@@ -2,22 +2,25 @@ name: Process Project Removal
 
 on:
   issues:
-    types: [labeled]
+    types: [labeled, edited]
   workflow_dispatch:
     inputs:
       issue_number:
         description: 'Issue number to process'
         required: true
 
+# Per-issue concurrency: a re-trigger for the same issue supersedes its own
+# in-flight run; different issues run in parallel.
 concurrency:
-  group: project-changes
-  cancel-in-progress: false
+  group: removal-${{ github.event.issue.number || github.event.inputs.issue_number }}
+  cancel-in-progress: true
 
 jobs:
   process-removal:
     if: >
-      (github.event_name == 'workflow_dispatch') ||
-      (github.event.label.name == 'removal' && !contains(github.event.issue.labels.*.name, 'pr-created'))
+      github.event_name == 'workflow_dispatch' ||
+      (contains(github.event.issue.labels.*.name, 'removal') &&
+       !contains(github.event.issue.labels.*.name, 'pr-created'))
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -54,6 +57,28 @@ jobs:
           ISSUE_BODY: ${{ steps.issue.outputs.body }}
           ISSUE_AUTHOR: ${{ steps.issue.outputs.author }}
         run: node scripts/process-removal.js
+        continue-on-error: true
+
+      - name: Comment on issue (processing error)
+        if: steps.process.outcome == 'failure'
+        uses: actions/github-script@v9
+        env:
+          ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
+        with:
+          script: |
+            const fs = require('fs');
+            let msg = 'Unknown error occurred.';
+            try { msg = fs.readFileSync('process-error.txt', 'utf-8').trim() || msg; } catch {}
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: Number(process.env.ISSUE_NUMBER),
+              body: `❌ **Error processing removal request**\n\n${msg}\n\nEdit the issue to fix this and it will be reprocessed automatically.`
+            });
+
+      - name: Fail if processing error
+        if: steps.process.outcome == 'failure'
+        run: exit 1
 
       - name: Create Pull Request
         id: pr
@@ -106,14 +131,16 @@ jobs:
               title: `[Removal] ${{ steps.process.outputs.name }}`
             });
 
-      - name: Comment on issue (failure)
-        if: failure()
+      - name: Comment on issue (unexpected failure)
+        if: failure() && steps.process.outcome == 'success'
         uses: actions/github-script@v9
+        env:
+          ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
         with:
           script: |
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: ${{ steps.issue.outputs.number }},
-              body: `**Error processing removal request**\n\nPlease ensure you selected a valid project.\n\nSee the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details.`
+              issue_number: Number(process.env.ISSUE_NUMBER),
+              body: `❌ **Unexpected error**\n\nSomething went wrong while creating the PR.\n\nSee the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details.`
             });

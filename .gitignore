@@ -16,6 +16,7 @@ Thumbs.db
 
 # CI artifacts
 process-output.txt
+process-error.txt
 
 # Generated: merged from static/data/projects/*.json (source of truth)
 static/data/projects.json

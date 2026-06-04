@@ -2,22 +2,26 @@ name: Process Project Submission
 
 on:
   issues:
-    types: [labeled]
+    types: [labeled, edited]
   workflow_dispatch:
     inputs:
       issue_number:
         description: 'Issue number to process'
         required: true
 
+# Scope concurrency to the issue: a re-trigger (edit/relabel) for the same
+# issue supersedes its own in-flight run, while different issues run in
+# parallel. Per-file project storage means concurrent issues never conflict.
 concurrency:
-  group: project-changes
-  cancel-in-progress: false
+  group: submission-${{ github.event.issue.number || github.event.inputs.issue_number }}
+  cancel-in-progress: true
 
 jobs:
   process-submission:
     if: >
-      (github.event_name == 'workflow_dispatch') ||
-      (github.event.label.name == 'submission' && !contains(github.event.issue.labels.*.name, 'pr-created'))
+      github.event_name == 'workflow_dispatch' ||
+      (contains(github.event.issue.labels.*.name, 'submission') &&
+       !contains(github.event.issue.labels.*.name, 'pr-created'))
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -53,31 +57,24 @@ jobs:
         env:
           ISSUE_BODY: ${{ steps.issue.outputs.body }}
           ISSUE_AUTHOR: ${{ steps.issue.outputs.author }}
-        run: |
-          node scripts/process-submission.js 2>&1 | tee process-output.txt
-          exit ${PIPESTATUS[0]}
+        run: node scripts/process-submission.js
         continue-on-error: true
-
-      - name: Check for processing errors
-        id: check-error
-        if: steps.process.outcome == 'failure'
-        run: |
-          ERROR_MSG=$(cat process-output.txt | grep -E "^ERROR=" | sed 's/ERROR=//' || echo "Unknown error occurred")
-          echo "error_message<<EOF" >> $GITHUB_OUTPUT
-          echo "$ERROR_MSG" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Comment on issue (processing error)
         if: steps.process.outcome == 'failure'
         uses: actions/github-script@v9
+        env:
+          ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
         with:
           script: |
-            const errorMsg = `${{ steps.check-error.outputs.error_message }}`;
+            const fs = require('fs');
+            let msg = 'Unknown error occurred.';
+            try { msg = fs.readFileSync('process-error.txt', 'utf-8').trim() || msg; } catch {}
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: ${{ steps.issue.outputs.number }},
-              body: `❌ **Error processing submission**\n\n**Issue:** ${errorMsg}\n\nPlease fix the issue and a maintainer will re-trigger the submission process.`
+              issue_number: Number(process.env.ISSUE_NUMBER),
+              body: `❌ **Error processing submission**\n\n${msg}\n\nEdit the issue to fix this and it will be reprocessed automatically.`
             });
 
       - name: Fail if processing error

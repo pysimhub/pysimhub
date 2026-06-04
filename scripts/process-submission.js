@@ -270,5 +270,7 @@ try {
 	}
 } catch (error) {
 	console.error(`ERROR=${error.message}`);
+	// Write the full (possibly multi-line) message for the workflow to post verbatim
+	writeFileSync('process-error.txt', error.message);
 	process.exit(1);
 }
