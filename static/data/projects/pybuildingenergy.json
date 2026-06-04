@@ -1,0 +1,21 @@
+{
+	"name": "PyBuildingEnergy",
+	"tagline": "python engine to simulate the building energy and thermal performance of a building using the ISO 52000",
+	"description": "**PyBuildingEnergy** is the first open-source Python library designed to simulate and assess building energy performance and thermal comfort using the latest standards from the **ISO 52000 family**.\n\nThe core of the software is the implementation of European technical standards related to the **Energy Performance of Buildings (EPB)** framework. In particular, it includes:\n\n* **EN ISO 52016-1:2018** – Used to calculate hourly or monthly energy needs for heating and cooling, as well as indoor building temperatures.\n\n* **EN ISO 52010** – Used for calculating solar irradiation on building surfaces.\n\n* **ISO 12831-3** – Used for the calculation of Domestic Hot Water (DHW) demand.\n\n* **ISO 15316** – Used for calculating the energy performance of building heating and domestic hot water (DHW) systems.\n\nBy translating these standards into an open and transparent Python framework, PyBuildingEnergy provides a reliable foundation for building energy simulation, retrofit assessment, compliance analysis, and the development of advanced energy-related applications and digital tools.",
+	"tags": [
+		"engineering",
+		"heating",
+		"physics",
+		"simulation",
+		"system-modeling",
+		"visualization"
+	],
+	"github": "https://github.com/EURAC-EEBgroup/pyBuildingEnergy",
+	"docs": "https://eurac-eebgroup.github.io/pybuildingenergy-docs/",
+	"pypi": "https://pypi.org/project/pybuildingenergy/",
+	"homepage": "https://eurac-eebgroup.github.io/tools.eeb.eurac.edu/Libraries/pybuildingenergy/",
+	"example": "https://github.com/EURAC-EEBgroup/pyBuildingEnergy/tree/master/examples",
+	"id": "pybuildingenergy",
+	"logo": "https://github.com/EURAC-EEBgroup/pyBuildingEnergy/blob/master/src/pybuildingenergy/assets/Logo_pyBuild.png",
+	"submittedBy": "DanieleAntonucci20"
+}
