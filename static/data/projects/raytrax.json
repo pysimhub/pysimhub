@@ -1,0 +1,20 @@
+{
+	"name": "Raytrax",
+	"tagline": "Electron Cyclotron Resonance Heating for Fusion Plasmas in JAX",
+	"description": "Raytrax simulates Electron Cyclotron Resonance Heating (ECRH) of magnetic confinement fusion plasmas. Powered by [JAX](https://docs.jax.dev/), it features JIT-compiled ray tracing and automatic differentiation – making it well-suited for gradient-based beam optimization in fusion plant design.",
+	"tags": [
+		"electromagnetic",
+		"heating",
+		"physics",
+		"powerplant",
+		"simulation",
+		"fusion"
+	],
+	"github": "https://github.com/proximafusion/raytrax",
+	"docs": "https://proximafusion.github.io/raytrax",
+	"pypi": "https://pypi.org/project/raytrax/",
+	"example": "https://proximafusion.github.io/raytrax/getting-started/",
+	"id": "raytrax",
+	"logo": "https://proximafusion.github.io/raytrax/assets/proxima.svg",
+	"submittedBy": "DavidMStraub"
+}
