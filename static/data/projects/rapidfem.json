@@ -1,0 +1,24 @@
+{
+	"name": "RapidFEM",
+	"tagline": "Electromagnetic FEM solver with Rust TD and FD core and Python API.",
+	"description": "Electromagnetic FEM solver written in Rust, distributed as a Python package on PyPI. Two backends behind one geometry/material/physics API: a frequency-domain solver (second-kind Nedelec edge elements, complex-symmetric sparse linear algebra) and a time-domain DGTD solver (discontinuous Galerkin, Krylov/ETD exponential time integration, model-order reduction). Optional Flask-based local UI with a code editor and live geometry viewer.",
+	"tags": [
+		"electromagnetic",
+		"engineering",
+		"finite-element",
+		"microwave",
+		"physics",
+		"radio-frequency",
+		"rf",
+		"simulation",
+		"transient"
+	],
+	"github": "https://github.com/milanofthe/rapidfem",
+	"docs": "https://fem.rapidpassives.org/latest/api",
+	"pypi": "https://pypi.org/project/rapidfem/",
+	"homepage": "https://fem.rapidpassives.org/",
+	"example": "https://fem.rapidpassives.org/notebook",
+	"id": "rapidfem",
+	"logo": "https://github.com/user-attachments/assets/c4a27b0f-dc5a-4877-a90f-276b961ae137",
+	"submittedBy": "milanofthe"
+}
