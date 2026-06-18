@@ -1,0 +1,24 @@
+{
+	"name": "ASE",
+	"tagline": "Atomic Simulation Environment",
+	"description": "The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. It is an international, open-source project where everybody is encouraged to participate and contribute. The code is freely available under the GNU LGPL license.",
+	"tags": [
+		"physics",
+		"simulation",
+		"thermodynamics",
+		"vibration",
+		"visualization",
+		"materials",
+		"atoms",
+		"density-functional theory",
+		"mlip"
+	],
+	"github": "https://gitlab.com/ase/ase",
+	"docs": "https://ase-lib.org",
+	"pypi": "https://pypi.org/project/ase",
+	"homepage": "https://ase-lib.org",
+	"example": "https://ase-lib.org/examples_generated/index.html",
+	"id": "ase",
+	"logo": "https://ase-lib.org/_static/ase256.png",
+	"submittedBy": "ajjackson"
+}
