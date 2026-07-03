@@ -14,10 +14,10 @@
 		"mlip"
 	],
 	"github": "https://gitlab.com/ase/ase",
-	"docs": "https://ase-lib.org",
+	"docs": "https://docs.ase-lib.org",
 	"pypi": "https://pypi.org/project/ase",
 	"homepage": "https://ase-lib.org",
-	"example": "https://ase-lib.org/examples_generated/index.html",
+	"example": "https://docs.ase-lib.org/examples_generated",
 	"id": "ase",
 	"logo": "/logos/ase.png",
 	"submittedBy": "ajjackson"
