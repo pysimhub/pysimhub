@@ -1,0 +1,22 @@
+{
+	"name": "GEMSEO",
+	"tagline": "A library for multidisciplinary studies",
+	"description": "For complex problems, several fields of physics or components come into play as numerical models, known as disciplines. These disciplines then need to be combined efficiently — in other words, engineers must build and maintain a multidisciplinary simulation process, drawing on a range of algorithms: design of experiments, optimization, coupling, derivative computation, and so on. Handling the complexity and cost of these processes for industrial or advanced research use is genuinely hard.\n\nGEMSEO (https://www.gemseo.org/) automatically generates multidisciplinary processes. Users describe the business problem they want to solve — the product's performance metric and the constraints it must satisfy — and then pick a strategy for solving and orchestrating the process, known as an MDO (Multidisciplinary Design Optimization) formulation. From there, GEMSEO builds the process automatically from the disciplines, sparing users the tedious work of wiring tools and software together by hand.\n\nThanks to its modular design, GEMSEO can be adopted step by step: starting with simulation process integration, moving through design space exploration and uncertainty propagation, and scaling up to full MDO or even MDO under uncertainty. At every stage, it delivers concrete, usable benefits to engineering teams.",
+	"tags": [
+		"digital-twin",
+		"engineering",
+		"nonlinear",
+		"sensitivity analysis",
+		"simulation",
+		"system-modeling",
+		"uncertainty quantification"
+	],
+	"github": "https://gitlab.com/gemseo/dev/gemseo/",
+	"docs": "https://gemseo.org/doc/gemseo",
+	"pypi": "https://pypi.org/project/gemseo/",
+	"condaForge": "https://anaconda.org/channels/conda-forge/packages/gemseo/overview",
+	"homepage": "https://gemseo.org",
+	"id": "gemseo",
+	"logo": "https://github.com/user-attachments/assets/15b13a50-a969-4ba9-8ea8-120fb26e1ae4",
+	"submittedBy": "loixou"
+}
