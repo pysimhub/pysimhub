@@ -1,0 +1,20 @@
+{
+	"name": "Nucleide",
+	"tagline": "A fast, open-source nuclear engineering toolkit in Rust with Python bindings.",
+	"description": "Nucleide is a modern Rust toolkit for nuclear-engineering workflow glue: legacy transport-code I/O, nuclide identification, materials, CRAM depletion, and enrichment analytics — exposed through a typed Python API.\n\nThe project is a fresh Rust implementation of capabilities pioneered by [PyNE](https://github.com/pyne/pyne), focused on memory safety, fast builds, and pip install-able wheels. Scope is intentionally narrow today and will expand as more parsers and workflow pieces land.",
+	"tags": [
+		"atoms",
+		"fusion",
+		"materials",
+		"physics",
+		"simulation"
+	],
+	"github": "https://github.com/nukehub-dev/nucleide",
+	"docs": "https://nucleide.nukehub.org/",
+	"pypi": "https://pypi.org/project/nucleide/",
+	"homepage": "https://nukehub.org",
+	"example": "https://nucleide.nukehub.org/tutorials/",
+	"id": "nucleide",
+	"logo": "https://github.com/user-attachments/assets/4d166088-368b-49a7-952b-a72b65b7f57e",
+	"submittedBy": "ahnaf-tahmid-chowdhury"
+}
