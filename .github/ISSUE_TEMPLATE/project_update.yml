@@ -38,6 +38,7 @@ body:
         - lcapy
         - mesa
         - mujoco-scene-editor
+        - nucleide
         - openmc
         - pathsim
         - pybuildingenergy
