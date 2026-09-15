@@ -1,0 +1,21 @@
+{
+	"name": "CARE",
+	"tagline": "ML-powered automated generation of chemical reaction networks in heterogeneous catalysis",
+	"description": "CARE (_Catalytic Automated Reaction Evaluator_) is a framework for the automated generation and manipulation of chemical reaction networks (CRNs) in heterogeneous catalysis. CARE is powered by ML-based energy evaluators (GAME-Net-UQ, FairChem, MACE, Orb, SevenNet) and includes multiscale kinetic functionalities enabling the quantification of catalytic activity for reactions containing thousands of elementary steps.",
+	"tags": [
+		"atoms",
+		"materials",
+		"mlip",
+		"simulation",
+		"thermodynamics",
+		"catalysis",
+		"chemical reaction networks"
+	],
+	"github": "https://github.com/LopezGroup-ICIQ/care",
+	"docs": "https://github.com/LopezGroup-ICIQ/care/blob/main/README.md",
+	"pypi": "https://pypi.org/project/care-crn/",
+	"example": "https://github.com/LopezGroup-ICIQ/care/blob/main/notebooks/care_demo.ipynb",
+	"id": "care",
+	"logo": "https://github.com/user-attachments/assets/76203e25-f5d3-42d7-9bc6-307e482bd0b5",
+	"submittedBy": "SantiagoMorandi"
+}
