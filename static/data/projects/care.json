@@ -16,6 +16,6 @@
 	"pypi": "https://pypi.org/project/care-crn/",
 	"example": "https://github.com/LopezGroup-ICIQ/care/blob/main/notebooks/care_demo.ipynb",
 	"id": "care",
-	"logo": "https://github.com/user-attachments/assets/76203e25-f5d3-42d7-9bc6-307e482bd0b5",
+	"logo": "/logos/care.png",
 	"submittedBy": "SantiagoMorandi"
 }

@@ -28,6 +28,7 @@ body:
         - autoemulate
         - bdsim
         - brian2
+        - care
         - cosapp
         - emerge
         - fenicsx
@@ -106,6 +107,8 @@ body:
         - label: "atoms"
         - label: "block-diagram"
         - label: "calibration"
+        - label: "catalysis"
+        - label: "chemical reaction networks"
         - label: "circuit"
         - label: "computational neuroscience"
         - label: "control"
