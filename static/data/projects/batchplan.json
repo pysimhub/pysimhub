@@ -1,0 +1,16 @@
+{
+	"name": "batchplan",
+	"tagline": "Batched robot motion planning with Python bindings and NumPy inputs and outputs",
+	"description": "batchplan is an open-source robot motion-planning library with Python bindings and NumPy inputs and outputs. It plans batches of collision-aware motions across independent scenes, including inverse kinematics, paths to joint or pose goals, picks, places and two-arm handovers. The implementation runs in Rust on CPU threads, with optional wgpu acceleration for IK and trajectory optimization. Install the batches package and import batchplan. Documentation includes complete planning and manipulation examples.",
+	"tags": [
+		"robotics",
+		"motion-planning",
+		"inverse-kinematics"
+	],
+	"github": "https://github.com/natsuku-lab/batchplan",
+	"docs": "https://github.com/natsuku-lab/batchplan/blob/v0.11.0/docs/README.md",
+	"pypi": "https://pypi.org/project/batches/",
+	"example": "https://github.com/natsuku-lab/batchplan/blob/v0.11.0/docs/python.md",
+	"id": "batchplan",
+	"submittedBy": "natsuku-lab"
+}
