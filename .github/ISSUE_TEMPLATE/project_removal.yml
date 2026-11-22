@@ -24,6 +24,7 @@ body:
       label: Project
       description: Select the project to remove.
       options:
+        - agentfem
         - archimedes
         - ase
         - autoemulate
