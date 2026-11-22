@@ -1,0 +1,22 @@
+{
+	"name": "AgentFEM",
+	"tagline": "Finite-element workflows for researchers and AI agents, with editable models and results you can check.",
+	"description": "AgentFEM brings structural mechanics, heat transfer and vibration analysis into readable Python workflows. Its CLI creates projects, checks settings, runs calculations and preserves results with verification evidence. Researchers and AI assistants work with the same model files.\n\nTry the static-solid getting-started example: create a cantilever project, run it and inspect the saved result. The core is Apache-2.0 and uses a local FEniCSx/PETSc/MPI environment. Linux and macOS are supported; Windows uses WSL2. The conda-forge installation includes the numerical dependencies; pip requires an existing compatible environment. An AI client is optional and configured separately.\n\nDisclosure: submitted by the AgentFEM maintainer.",
+	"tags": [
+		"engineering",
+		"finite-element",
+		"materials",
+		"nonlinear",
+		"physics",
+		"simulation",
+		"transient",
+		"vibration"
+	],
+	"github": "https://github.com/haoming-luo/agentfem",
+	"docs": "https://haoming-luo.github.io/agentfem/",
+	"pypi": "https://pypi.org/project/agentfem/",
+	"condaForge": "https://anaconda.org/conda-forge/agentfem",
+	"example": "https://github.com/haoming-luo/agentfem#run-your-first-model",
+	"id": "agentfem",
+	"submittedBy": "haoming-luo"
+}
